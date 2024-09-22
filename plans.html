@@ -7,88 +7,35 @@
 </head>
 <body>
     <style>
-       
         @import url(
             'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
             );
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family:'PT', Serif;
-            scroll-behavior: smooth;
-            list-style: none;
-            text-decoration: none;
-            font-family: "Poppins", sans-serif;
-        }
-        body{
-            background-color: #333;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-        }
-        .pane_container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .pane_container_content{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-        .pane{
-            background-color: #ffd700;
-            width: 200px;
-            height: 50px;
-            margin-top: 5px;
-            border-radius: 10px;
-            padding: 10px 10px;
-            cursor: pointer;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-        }
-        .pane-text{
-            font-size: 25px;
-            color: #000;
-            font-weight: bold;
-        }
-        @media screen and (max-width:570px) {
-            .pane_container_content{
-            grid-template-columns: repeat(1, 1fr);
-            gap: 2rem;
-        }
-        .pane{
-            width: 270px;
-            padding: 20px 10px;
-           
-        }
-        .pane-text{
-            font-size: 20px;
-            font-weight: 500;
-        }
-        }
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family:'PT', Serif;
+                scroll-behavior: smooth;
+                list-style: none;
+                text-decoration: none;
+                font-family: "Poppins", sans-serif;
+            }
+            body{
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                background-color: #333;
+            }
+         /*    .tier-container{
+                padding: ;
+            } */
     </style>
-    <div class="pane_container">
-        <div class="pane_container_content">
+
+    <section class="tiers">
+        <div class="tier-container">
             
-            <div class="pane">
-                <h3 class="pane-text">20, 576789</h3>
-            </div>
-            <div class="pane">
-                <a class="pane-text" href="#">INVEST</a>
-            </div>
-            <div class="pane">
-                <a class="pane-text" href="#">DEPOSIT</a>
-            </div> 
-            <div class="pane">
-                <a class="pane-text" href="#">WITHDRAW</a>
-            </div>
         </div>
-    </div>
+    </section>
+
 </body>
 </html>
