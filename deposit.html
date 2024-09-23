@@ -43,7 +43,6 @@
                 display: flex;
                 justify-content: center;
                 align-content:  center;
-                height: 100vh;
             }
             .deposit-header{
                 position: absolute;
@@ -85,9 +84,12 @@
             .wallet-code-text{
                 padding: 2px 2px;
                 display: flex;
+                justify-content: center;
+                align-content: center;
                 gap: 1rem;
                 background-color: #ffd700;
                 position: relative;
+                min-width: 410px;
             }
             .wallet-code{
                 font-weight: 300;
@@ -96,8 +98,30 @@
                 cursor: pointer;
                 font-size: 15px;
                 font-weight: 400;
-                
+                position: relative;
             }
+            .tooltip-text{
+                 visibility: hidden;
+                width: 70px; /* Adjust based on your content */
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                padding: 3px;
+                font-size: 10px;
+                position: absolute;
+                z-index: 1;
+                bottom: -7%; /* Position above the button */
+                left: 50%;
+                transform: translateX(20%);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+        }
+          .copy_text:hover .tooltip-text {
+                visibility: visible;
+                opacity: 1;
+            }    
+            
             </style>
             <main class="main">
     <section class="deposit">
@@ -114,7 +138,9 @@
                         <div class="wallet-code-text">
                             
                             <h4 class="wallet-code bit-code">bc1ql5pw2wqe79p3qy249vsm4rjekw67ea0v7p5t2s</h4>
-                            <span class="copy_text bit-copy"> <i class="fas fa-copy"></i> Copy Code</span>
+                            <span class="copy_text bit-copy"> <i class="fas fa-copy"></i> 
+                                <span class="tooltip-text">Copy Code</span>
+                            </span>
                         </div>
                         
                     </div>
@@ -127,7 +153,9 @@
                         <div class="wallet-code-text">
                         
                         <h4 class="wallet-code eth-code">0xabc12b3c77147807037d792a250c13881ba35bb3</h4>
-                        <span class="copy_text eth-copy"> <i class="fas fa-copy"></i> Copy Code</span>
+                        <span class="copy_text eth-copy"> <i class="fas fa-copy"></i> 
+                            <span class="tooltip-text">Copy Code</span>
+                        </span>
                         </div>
                     </div>
                 </div>
@@ -136,10 +164,11 @@
                         <img src="img/USDT.jpg" alt="bitcoin" class="code">
                     </div>
                     <div class="address-code">
-                        <div class="wallet-code-text">
-                            
+                        <div class="wallet-code-text wallet-usdt">
                         <h4 class="wallet-code usdt-code">TCmevzMKV62arnKZXjaKVAzN8b6vszA4hX</h4>
-                        <span class="copy_text usdt-copy"> <i class="fas fa-copy"></i> Copy Code</span>
+                        <span class="copy_text usdt-copy"> <i class="fas fa-copy"></i>
+                            <span class="tooltip-text">Copy Code</span>
+                        </span>
                         </div>
                     </div>
                 </div>
@@ -154,10 +183,10 @@
             const textCode = code.textContent;
             codeElement.addEventListener('click', ()=> {
                 navigator.clipboard.writeText(textCode);
-                codeElement.innerHTML = "<i class='fas fa-check'></i> Copied!";
+                codeElement.innerHTML = "<i class='fas fa-check'></i>";
  /*                setInterval(()=> {
                     codeElement.textContent = "copy code" }, 1600); */
-                    setTimeout(() => codeElement.innerHTML = "<i class='fas fa-copy'></i> Copy Code", 1600);
+                    setTimeout(() => codeElement.innerHTML = "<i class='fas fa-copy'></i>", 1600);
             })
         }
         copyCode('.bit-copy', '.bit-code' );
