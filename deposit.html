@@ -34,7 +34,8 @@
         position: fixed;
         z-index: 10;
         width: 100%;
-        padding: 2% 3%;
+        padding: 1% 3%;
+        background-color: #222121;
       }
       .logo img {
         width: 150px;
@@ -96,14 +97,16 @@
         justify-content: center;
         align-items: center;
       }
-      .copy-button-mobile{
+      .copy-button-mobile {
         display: none;
+        min-width: 150px;
         padding: 5px 5px;
         border-radius: 10px;
         margin-bottom: 5px;
         background-color: #ffd700;
+        text-align: center;
       }
-      .copi{
+      .copi {
         font-size: 17px;
         font-weight: 400;
       }
@@ -152,12 +155,12 @@
           margin-top: 10rem;
         }
 
-        .wallet-code-text{
-            display: none;
+        .wallet-code-text {
+          display: none;
         }
 
-        .copy-button-mobile{
-            display: block;
+        .copy-button-mobile {
+          display: block;
         }
 
         .barcode .code {
@@ -184,9 +187,11 @@
               </div>
               <div class="address-code">
                 <div class="copy-button-container">
-                    <div class="copy-button-mobile">
-                        <span class="copi copy-bit">Copy Code   <i class="fas fa-copy"></i></span>
-                    </div>
+                  <div class="copy-button-mobile">
+                    <span class="copi copy-bit"
+                      >Copy Code <i class="fas fa-copy"></i
+                    ></span>
+                  </div>
                 </div>
                 <div class="wallet-code-text">
                   <h4 class="wallet-code bit-code">
@@ -201,13 +206,15 @@
             </div>
             <div class="address">
               <div class="barcode">
-                <img src="img/ETH.jpg" alt="bitcoin" class="code" />
+                <img src="img/ETH.jpg" alt="eth" class="code" />
               </div>
               <div class="address-code">
                 <div class="copy-button-container">
-                    <div class="copy-button-mobile">
-                        <span class="copi copy-eth">Copy Code   <i class="fas fa-copy"></i></span>
-                    </div>
+                  <div class="copy-button-mobile">
+                    <span class="copi copy-eth"
+                      >Copy Code <i class="fas fa-copy"></i
+                    ></span>
+                  </div>
                 </div>
                 <div class="wallet-code-text">
                   <h4 class="wallet-code eth-code">
@@ -222,13 +229,15 @@
             </div>
             <div class="address">
               <div class="barcode">
-                <img src="img/USDT.jpg" alt="bitcoin" class="code" />
+                <img src="img/USDT.jpg" alt="usdt" class="code" />
               </div>
               <div class="address-code">
                 <div class="copy-button-container">
-                    <div class="copy-button-mobile">
-                        <span class="copi copy-usdt">Copy Code   <i class="fas fa-copy"></i></span>
-                    </div>
+                  <div class="copy-button-mobile">
+                    <span class="copi copy-usdt"
+                      >Copy Code <i class="fas fa-copy"></i
+                    ></span>
+                  </div>
                 </div>
                 <div class="wallet-code-text wallet-usdt">
                   <h4 class="wallet-code usdt-code">
@@ -267,27 +276,28 @@
       copyCode(".eth-copy", ".eth-code");
       copyCode(".usdt-copy", ".usdt-code");
 
-
       const bitcoinCode = "bc1ql5pw2wqe79p3qy249vsm4rjekw67ea0v7p5t2s";
       const ethCode = "0xabc12b3c77147807037d792a250c13881ba35bb3";
       const usdtCode = "TCmevzMKV62arnKZXjaKVAzN8b6vszA4hX";
 
-      function mobileCodeCopy (walletCode, elemt){
-
+      function mobileCodeCopy(walletCode, elemt) {
         const mobileElement = document.querySelector(elemt);
 
-        mobileElement.addEventListener('click', function() {
-            navigator.clipboard.writeText(walletCode);
-            mobileElement.innerHTML = '<span class="copi">Copied  <i class="fas fa-check"></i></span>'
+        mobileElement.addEventListener("click", function () {
+          navigator.clipboard.writeText(walletCode);
+          mobileElement.innerHTML =
+            '<span class="copi">Copied  <i class="fas fa-check"></i></span>';
 
-          setTimeout( () => (
-            mobileElement.innerHTML = '<span class="copi">Copy Code  <i class="fas fa-copy"></i></span>'), 1600
-    );
-        })
-
+          setTimeout(
+            () =>
+              (mobileElement.innerHTML =
+                '<span class="copi">Copy Code  <i class="fas fa-copy"></i></span>'),
+            1600
+          );
+        });
       }
 
-      mobileCodeCopy(bitcoinCode, ".copy-bit")
+      mobileCodeCopy(bitcoinCode, ".copy-bit");
       mobileCodeCopy(ethCode, ".copy-eth");
       mobileCodeCopy(usdtCode, ".copy-usdt");
     </script>
