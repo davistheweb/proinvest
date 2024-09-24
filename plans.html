@@ -1,145 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        @import url(
-            'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-            );
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-            *{
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-                font-family:'PT', Serif;
-                scroll-behavior: smooth;
-                list-style: none;
-                color: #000;
-                text-decoration: none;
-                font-family: "Poppins", sans-serif;
-            }
-            body{
-                background-color: #333;
-            }
-            .tiers {
-                width: 100%; 
-                display: flex;
-                justify-content: center;
-            }
-            .grid{
-                display:grid;
-            }
-            .tier-container{
-               justify-content: center;
-              
-               position: relative;
-            }
-        .tier-plan{
-            font-size: 25px;
-            text-align: center;
-        }
-        .tier-heading{
-            border-radius: 20rem;
-            background-color:#ffd700;
-            width: 20rem;
-            justify-self: center;
-            position: relative;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "PT", Serif;
+        scroll-behavior: smooth;
+        list-style: none;
+        color: #000;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+      }
+      .header {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        padding: 2% 3%;
+      }
+      .logo img {
+        width: 150px;
+      }
+      .grid {
+        display: grid;
+      }
+      .tier-container {
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex !important;
+        flex-direction: column;
+      }
+      .tier-plan {
+        font-size: 25px;
+        text-align: center;
+      }
+      .tier-heading {
+        border-radius: 20rem;
+        background-color: #ffd700;
+        width: 20rem;
+        justify-self: center;
+        position: relative;
+      }
+      .tier-title {
+        text-align: center;
+      }
 
-        }
-        .tier-title{
-            text-align: center;
-        }
+      .tier-content {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        .tier-content{
-            display: flex;
-            justify-content: space-between;
-            
-        }
+      .tier-contents {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .tier-box {
+        background-color: #ffd700;
+        border-radius: 15px;
+        width: 200px;
+        padding: 5px 5px;
+      }
 
-  
+      .tier-title {
+        font-size: 17px;
+      }
+
+      .tier-parent {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .tier-child {
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      @media screen and (max-width: 580px) {
+        .tier-container {
+          margin-top: 10rem;
+        }
         .tier-contents {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 2rem;
+          margin-top: 3rem;
+          justify-self: center;
         }
-     .tier-box{
-          background-color: #ffd700;  
-          border-radius: 15px;
-          width: 200px;
-          padding: 5px 5px;
-        }
-
-        .tier-title{
-            font-size: 17px;
-        }
-
-        .tier-parent{
-            font-size: 15px;
-            font-weight: 600;
-        }
-        .tier-child{
-            font-size: 15px;
-            font-weight: 300;
-        }
-
-
-        @media screen and (max-width: 580px) {
-            .tier-contents {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-            justify-self: center;
-        }
-        }
+      }
     </style>
-        
-        <section class="tiers">
-        <div class="tier-container grid">
-            <div class="tier-heading">
-                <h1 class="tier-plan">INVESTMENT PLANS</h1>
-            </div>
-            <div class="tier-contents grid">
-                <div class="tier-box">
-                    <a href="deposit.html">
-                    <h1 class="tier-title">TIER 1</h1>
-                    <div class="tier-content"><h4 class="tier-parent">Min Deposit</h4><h4 class="tier-child">$100</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Max Deposit</h4><h4 class="tier-child">$1000</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Profit</h4><h4 class="tier-child">15%</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Duration</h4><h4 class="tier-child">24hrs</h4></div>
-                </a>
-                </div>
-                <div class="tier-box">
-                    <a href="deposit.html">                    
-                        <h1 class="tier-title">TIER 2</h1>
-                    <div class="tier-content"><h4 class="tier-parent">Min Deposit</h4><h4 class="tier-child">$100</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Max Deposit</h4><h4 class="tier-child">$10,000</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Profit</h4><h4 class="tier-child">35%</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Duration</h4><h4 class="tier-child">24hrs</h4></div>
-                </a>
-                </div>
-                <div class="tier-box">
-                    <a href="deposit.html">    
-                    <h1 class="tier-title">TIER 3</h1>
-                    <div class="tier-content"><h4 class="tier-parent">Min Deposit</h4><h4 class="tier-child">$10,001</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Max Deposit</h4><h4 class="tier-child">$100,000</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Profit</h4><h4 class="tier-child">85%</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Duration</h4><h4 class="tier-child">24hrs</h4></div>
-                        </a>
-                </div>
-                <div class="tier-box">
-                    <a href="deposit.html">    
-                    <h1 class="tier-title">PRO TRADER</h1>
-                    <div class="tier-content"><h4 class="tier-parent">Min Deposit</h4><h4 class="tier-child">$50,000</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">Max Deposit</h4><h4 class="tier-child">$1000</h4></div>
-                    <div class="tier-content"><h4 class="tier-parent">6hrsRuns for</h4><h4 class="tier-child">14days</h4></div>
-                        </a>
-                </div>
-            </div>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="" />
+      </a>
+    </header>
+    <section class="tiers">
+      <div class="tier-container grid">
+        <div class="tier-heading">
+          <h1 class="tier-plan">INVESTMENT PLANS</h1>
         </div>
+        <div class="tier-contents grid">
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">TIER 1</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$100</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$1000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Profit</h4>
+                <h4 class="tier-child">15%</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Duration</h4>
+                <h4 class="tier-child">24hrs</h4>
+              </div>
+            </a>
+          </div>
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">TIER 2</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$100</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$10,000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Profit</h4>
+                <h4 class="tier-child">35%</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Duration</h4>
+                <h4 class="tier-child">24hrs</h4>
+              </div>
+            </a>
+          </div>
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">TIER 3</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$10,001</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$100,000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Profit</h4>
+                <h4 class="tier-child">85%</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Duration</h4>
+                <h4 class="tier-child">24hrs</h4>
+              </div>
+            </a>
+          </div>
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">PRO TRADER</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$50,000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$1000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">6hrsRuns for</h4>
+                <h4 class="tier-child">14days</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
