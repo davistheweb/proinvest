@@ -156,6 +156,7 @@
         
       }
       .upload-reciept {
+        position: relative;
         justify-self: center;
       }
 
@@ -209,6 +210,13 @@
         border: none;
         cursor: pointer;
         font-weight: 400;
+      }
+
+      .alertUser {
+        position: absolute;
+        background-color: #ffd700;
+        width: 170px;
+        height: 150px;
       }
 
       @media screen and (max-width: 580px) {
@@ -314,6 +322,12 @@
             <div class="deposit-section">
                 <form id="uploadReciept">
                     <div class="upload-reciept">
+                        <div class="alertUser">
+                        <div class="message-type">
+                            <h4 class="message success-sent">Reciept Sent Successfully</h4>
+                            <span close>OK</span>
+                        </div>
+                    </div>
                         <p class="guide">Use any of the address to make transactions</p>
                         <div class="upload-reciept-parent">
                         <label id="customFileButton" for="fileInput">Upload Reciept</label>
@@ -420,14 +434,14 @@
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    alert('File uploaded successfully');
+                    alert('Reciept sent successfully');
                 } else {
-                    alert('Failed to upload file');
+                    alert('Failed to send reciept');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred while uploading the file');
+                alert('An error occurred while sending the reciept');
             });
         });
     </script>
