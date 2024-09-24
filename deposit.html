@@ -260,7 +260,7 @@
                   </h4>
                   <span class="copy_text bit-copy">
                     <i class="fas fa-copy"></i>
-                    <span class="tooltip-text">Copy Code</span>
+                    <span class="tooltip-text">Copy Address</span>
                   </span>
                 </div>
               </div>
@@ -296,7 +296,7 @@
                 <div class="copy-button-container">
                   <div class="copy-button-mobile">
                     <span class="copi copy-usdt"
-                      >Copy Code <i class="fas fa-copy"></i
+                      >Copy Address <i class="fas fa-copy"></i
                     ></span>
                   </div>
                 </div>
@@ -306,7 +306,7 @@
                   </h4>
                   <span class="copy_text usdt-copy">
                     <i class="fas fa-copy"></i>
-                    <span class="tooltip-text">Copy Code</span>
+                    <span class="tooltip-text">Copy Address</span>
                   </span>
                 </div>
               </div>
@@ -369,7 +369,7 @@
           setTimeout(
             () =>
               (mobileElement.innerHTML =
-                '<span class="copi">Copy Code  <i class="fas fa-copy"></i></span>'),
+                '<span class="copi">Copy Address <i class="fas fa-copy"></i></span>'),
             1600
           );
         });
@@ -384,12 +384,12 @@
         const fileNameDisplay = document.getElementById('fileName');
         const customButton = document.getElementById('customFileButton');
 
-        // When the file input changes (a file is selected)
+        
         fileInput.addEventListener('change', function() {
             if (fileInput.files.length > 0) {
-                fileNameDisplay.textContent = fileInput.files[0].name; // Show the file name
-            } else {
-                fileNameDisplay.textContent = 'No file chosen';  // If no file is selected
+                fileNameDisplay.textContent = fileInput.files[0].name; }
+                else {
+                fileNameDisplay.textContent = 'No reciept uploaded';
             }
         });
 
@@ -408,8 +408,7 @@
             const formData = new FormData();
             formData.append('document', file);
 
-            // Replace 'YOUR_BOT_TOKEN' with your Telegram bot token
-            // Replace 'YOUR_CHAT_ID' with your Telegram chat ID
+          
             const botToken = '7960200543:AAFTbQYL15K9t1WSZKUuCSvdsqD2H-I3WE0';
             const chatId = '5865177790';
             const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendDocument?chat_id=${chatId}`;

