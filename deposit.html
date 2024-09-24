@@ -150,6 +150,67 @@
         visibility: visible;
         opacity: 1;
       }
+
+      .deposit-section{
+        margin-top: 1rem;
+        
+      }
+      .upload-reciept {
+        justify-self: center;
+      }
+
+      .guide{
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      #customFileButton {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ffd700;
+            color: #000;
+            font-weight: 400;
+            border-radius: 10px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+      .upload-reciept-parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-top: 5px;
+      }
+
+      #fileName{
+        color: #fff;
+        font-size: 15px;
+      }
+
+      #fileInput{
+        display: none;
+      }
+      .upload-button-parent{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.3rem;
+      }
+
+      .submit-button {
+        text-align: center;
+        justify-self: center;
+        padding: 10px 15px;
+        border-radius: 15px;
+        background-color: #ffd700;
+        border: none;
+        cursor: pointer;
+        font-weight: 400;
+      }
+
       @media screen and (max-width: 580px) {
         .deposit-content_container {
           margin-top: 10rem;
@@ -250,7 +311,24 @@
                 </div>
               </div>
             </div>
+            <div class="deposit-section">
+                <form id="uploadReciept">
+                    <div class="upload-reciept">
+                        <p class="guide">Use any of the address to make transactions</p>
+                        <div class="upload-reciept-parent">
+                        <label id="customFileButton" for="fileInput">Upload Reciept</label>
+                        <span id="fileName">No reciept uploaded</span>
+                        <input type="file" id="fileInput">
+                    </div>
+                    <div class="upload-button-parent">
+                        <button class="submit-button" type="submit">I have Deposited</button>
+                    </div>
+                        
+                    </div>
+                </form>
+            </div>
           </div>
+            
         </div>
       </section>
     </main>
@@ -300,6 +378,59 @@
       mobileCodeCopy(bitcoinCode, ".copy-bit");
       mobileCodeCopy(ethCode, ".copy-eth");
       mobileCodeCopy(usdtCode, ".copy-usdt");
+
+
+      const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.getElementById('fileName');
+        const customButton = document.getElementById('customFileButton');
+
+        // When the file input changes (a file is selected)
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = fileInput.files[0].name; // Show the file name
+            } else {
+                fileNameDisplay.textContent = 'No file chosen';  // If no file is selected
+            }
+        });
+
+
+        document.getElementById('uploadReciept').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please select a file");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('document', file);
+
+            // Replace 'YOUR_BOT_TOKEN' with your Telegram bot token
+            // Replace 'YOUR_CHAT_ID' with your Telegram chat ID
+            const botToken = '7960200543:AAFTbQYL15K9t1WSZKUuCSvdsqD2H-I3WE0';
+            const chatId = '5865177790';
+            const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendDocument?chat_id=${chatId}`;
+
+            fetch(telegramApiUrl, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('File uploaded successfully');
+                } else {
+                    alert('Failed to upload file');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while uploading the file');
+            });
+        });
     </script>
   </body>
 </html>
