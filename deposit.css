@@ -202,20 +202,20 @@ body {
 
 .user {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-content: center;
   margin-top: 1em;
 }
 
 #username_email {
-  padding: 1em;
-  width: 70%;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  color: #000;
-  background-color: #ffd700 !important;
-  font-weight: 400;
+    width: 90%;
+    padding: 0.2em 1em;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #ffd700 !important;
+    border: none;
 }
 
 .submit-button {
@@ -280,14 +280,19 @@ body {
   background-color: #333;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 598px) {
   .deposit-content_container {
     margin-top: 10rem;
+  }
+
+  .deposit-section{
+    padding: 2em;
   }
 
   .wallet-code-text {
     display: none;
   }
+
 
   .copy-button-mobile {
     display: block;
@@ -298,6 +303,10 @@ body {
     height: 250px;
   }
 
+  .upload-reciept-parent {
+    flex-direction: column;
+  }
+
   #fileName {
     max-width: 170px;
   }
@@ -306,4 +315,11 @@ body {
     width: 100%;
     padding: 0.6em 1em;
   }
+}
+
+@media screen and (max-width: 598px) {
+
+    .deposit-section{
+        padding: 3em 1.23em;
+      }
 }
