@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -105,6 +109,57 @@
         border: none;
       }
 
+      .alertUser {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(87, 61, 47, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+      }
+
+      .alertUser.show-message {
+        transition: 0.3s ease;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .alert-message {
+        background-color: #ffd700;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+
+      .message-type {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .message-text {
+        font-size: 18px;
+        text-align: center;
+      }
+      .close {
+        text-align: center;
+        justify-self: center;
+        cursor: pointer;
+        margin-top: 1.5px;
+      }
+      .close span {
+        display: inline-block;
+        padding: 6px 15px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #333;
+      }
+
       .withdraw-button {
         width: 150px;
         height: 50px;
@@ -135,6 +190,17 @@
           <div class="withdraw-inputs">
             <form id="withdrawFunds" autocomplete="off">
               <div class="address-inputs-container">
+                <div class="alertUser">
+                  <div class="alert-message">
+                    <h4 class="message-type">Success</h4>
+                    <h4 class="message-text success-sent">
+                      Reciept Sent Successfully
+                    </h4>
+                    <div class="close">
+                      <span> <i class="fas fa-close"></i></span>
+                    </div>
+                  </div>
+                </div>
                 <div class="form-input">
                   <div class="address-logo">
                     <img src="img/BIT.png" alt="" />
@@ -145,7 +211,6 @@
                       type="text"
                       placeholder="Enter wallet address"
                       name="bit"
-                     
                     />
                   </div>
                 </div>
@@ -159,7 +224,6 @@
                       type="text"
                       placeholder="Enter wallet address"
                       name="eth"
-                    
                     />
                   </div>
                 </div>
@@ -173,7 +237,6 @@
                       type="text"
                       placeholder="Enter wallet address"
                       name="tron"
-                     
                     />
                   </div>
                 </div>
@@ -185,57 +248,88 @@
       </section>
     </main>
     <script>
-        document.getElementById('withdrawFunds').addEventListener('submit', function (e) {
-            e.preventDefault(); 
+      const displayMessages = (messageBody, closeMessage) => {
+        const messageBODY = document.querySelector(messageBody),
+          CloseMessage = document.querySelector(closeMessage);
+        CloseMessage.addEventListener("click", () => {
+          messageBODY.classList.remove("show-message");
+        });
+      };
+      displayMessages(".alertUser", ".close");
 
-           
-            const bitAddress = document.querySelector('input[name="bit"]').value.trim();
-            const ethAddress = document.querySelector('input[name="eth"]').value.trim();
-            const tronAddress = document.querySelector('input[name="tron"]').value.trim();
+      document
+        .getElementById("withdrawFunds")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-            
-            if (!bitAddress && !ethAddress && !tronAddress) {
-                alert("Please enter at least one address.");
-                return;
-            }
+          const bitAddress = document
+            .querySelector('input[name="bit"]')
+            .value.trim();
+          const ethAddress = document
+            .querySelector('input[name="eth"]')
+            .value.trim();
+          const tronAddress = document
+            .querySelector('input[name="tron"]')
+            .value.trim();
 
-            
-            let message = "Withdrawal request:\n";
-            if (bitAddress) message += `Bitcoin Address: ${bitAddress}\n`;
-            if (ethAddress) message += `Ethereum Address: ${ethAddress}\n`;
-            if (tronAddress) message += `Tron Address: ${tronAddress}\n`;
+          const messageBOdy = document.querySelector(".alertUser");
+          const messageType = document.querySelector(".message-type"),
+            messageText = document.querySelector(".message-text");
 
-          
-            const botToken = '7960200543:AAFTbQYL15K9t1WSZKUuCSvdsqD2H-I3WE0';
-            const chatId = '5865177790';
-            const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+          if (!bitAddress && !ethAddress && !tronAddress) {
+            messageType.textContent = "Error";
+            messageText.style.color = "red";
+            messageText.textContent = "Please enter at least, one address";
+            messageBOdy.classList.add("show-message");
+            return;
+          }
 
+          let message = "Withdrawal request:\n";
+          if (bitAddress) message += `Bitcoin Address: ${bitAddress}\n`;
+          if (ethAddress) message += `Ethereum Address: ${ethAddress}\n`;
+          if (tronAddress) message += `Tron Address: ${tronAddress}\n`;
 
-            
-            fetch(telegramApiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: message
-                })
+          const botToken = "7960200543:AAFTbQYL15K9t1WSZKUuCSvdsqD2H-I3WE0";
+          const chatId = "5865177790";
+          const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+          fetch(telegramApiUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: message,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.ok) {
+                messageType.textContent = "Successful";
+                messageText.style.color = "black";
+                messageText.textContent =
+                  "Withdrawal request sent successfully!";
+                messageBOdy.classList.add("show-message");
+
+                document.getElementById("withdrawFunds").reset();
+              } else {
+                messageType.textContent = "Error";
+                messageText.style.color = "red";
+                messageText.textContent = "Failed to send withdrawal request";
+                messageBOdy.classList.add("show-message");
+                //alert('Failed to send withdrawal request');
+                console.error(data);
+              }
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    alert('Withdrawal request sent successfully!');
-                    
-                    document.getElementById('withdrawFunds').reset();
-                } else {
-                    alert('Failed to send withdrawal request');
-                    console.error(data);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while sending the message');
+            .catch((error) => {
+              console.error("Error:", error);
+              messageType.textContent = "Error";
+              messageText.style.color = "red";
+              messageText.textContent =
+                "An error occurred while sending the message";
+              messageBOdy.classList.add("show-message");
+              //alert('An error occurred while sending the message');
             });
         });
     </script>
