@@ -526,13 +526,13 @@
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
           if (emailRegex.test(username)) {
-            // Input is an email
+          
             messageCaption = `User Details: ${username} (Email)`;
           } else if (username.startsWith("@")) {
-            // Input is a Telegram username that already starts with @
+          
             messageCaption = `User Details: ${username}`;
           } else {
-            // Input is a Telegram username without @, add the @ symbol
+          
             messageCaption = `User Details: @${username}`;
           }
 
