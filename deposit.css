@@ -58,9 +58,13 @@ body {
 .wallet-address {
   display: grid;
   margin-top: 1rem;
+  gap: 2em;
 }
 .address {
-  padding: 2px;
+    border:  1px solid #ffd700;
+    box-shadow: 0 0px 10px #ffd90025;
+    border-radius: 20px;
+  padding: .7em;
   display: grid;
   justify-content: center;
   align-items: center;
