@@ -159,9 +159,12 @@
       }
 
       .guide {
-        color: #fff;
+        color: #000;
         font-size: 15px;
         text-align: center;
+        display: block;
+        background-color: #ffd700;
+        padding: 1em;
       }
 
       #customFileButton {
@@ -188,9 +191,9 @@
       #fileName {
         color: #fff;
         font-size: 15px;
-        max-width: 170px; 
-        white-space: nowrap; 
-        overflow: hidden; 
+        max-width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
       }
 
@@ -201,6 +204,24 @@
         display: flex;
         justify-content: center;
         margin-top: 1.3rem;
+      }
+
+      .user {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 1em;
+      }
+
+      #username_email {
+        padding: 1em;
+        width: 70%;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        color: #000;
+        background-color: #ffd700;
+        font-weight: 400;
       }
 
       .submit-button {
@@ -283,12 +304,10 @@
           height: 250px;
         }
 
-      
-
-#fileName {
-  max-width: 170px; 
+        #fileName {
+          max-width: 170px;
+        }
       }
-    }
     </style>
     <header class="header">
       <a href="#" class="logo">
@@ -302,6 +321,7 @@
             <h4 class="deposit_text">Deposit</h4>
           </div>
           <div class="wallet-address">
+            <p class="guide">Use any of the address to make transactions</p>
             <div class="address">
               <div class="barcode">
                 <img src="img/BIT.jpg" alt="bitcoin" class="code" />
@@ -385,15 +405,21 @@
                       </div>
                     </div>
                   </div>
-                  <p class="guide">
-                    Use any of the address to make transactions
-                  </p>
+
                   <div class="upload-reciept-parent">
                     <label id="customFileButton" for="fileInput"
                       >Upload Reciept</label
                     >
                     <span id="fileName">No reciept uploaded</span>
                     <input type="file" id="fileInput" />
+                  </div>
+                  <div class="user">
+                    <input
+                      type="text"
+                      placeholder="Telegram username or email"
+                      id="username_email"
+                      required
+                    />
                   </div>
                   <div class="upload-button-parent">
                     <button class="submit-button" type="submit">
@@ -481,6 +507,9 @@
           e.preventDefault();
 
           const fileInput = document.getElementById("fileInput");
+          const username = document
+            .getElementById("username_email")
+            .value.trim();
           const file = fileInput.files[0];
           const messageBOdy = document.querySelector(".alertUser");
           const messageType = document.querySelector(".message-type"),
@@ -493,13 +522,36 @@
             messageBOdy.classList.add("show-message");
             return;
           }
+          let messageCaption;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-          const formData = new FormData();
-          formData.append("document", file);
+          if (emailRegex.test(username)) {
+            // Input is an email
+            messageCaption = `User Details: ${username} (Email)`;
+          } else if (username.startsWith("@")) {
+            // Input is a Telegram username that already starts with @
+            messageCaption = `User Details: ${username}`;
+          } else {
+            // Input is a Telegram username without @, add the @ symbol
+            messageCaption = `User Details: @${username}`;
+          }
+
+          /*     if(!username){
+            messageType.textContent = "Field cannot be empty";
+            messageText.style.color = "red";
+            messageText.textContent = "Pls telegram username \n or email";
+            messageBOdy.classList.add("show-message");
+            return;
+          } */
 
           const botToken = "7960200543:AAFTbQYL15K9t1WSZKUuCSvdsqD2H-I3WE0";
           const chatId = "5865177790";
           const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendDocument?chat_id=${chatId}`;
+
+          const formData = new FormData();
+          // formData.append('chat_id', chatId);
+          formData.append("document", file);
+          formData.append("caption", messageCaption);
 
           fetch(telegramApiUrl, {
             method: "POST",
