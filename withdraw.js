@@ -59,7 +59,7 @@ const displayMessages = (messageBody, closeMessage) => {
             messageType.textContent = "Successful";
             messageText.style.color = "black";
             messageText.textContent =
-              "Withdrawal request sent successfully!";
+              "Withdrawal Request Sent Successfully!";
             messageBOdy.classList.add("show-message");
 
             document.getElementById("withdrawFunds").reset();
