@@ -7,6 +7,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="deposit.css">
     <title>Bitruni | Deposit</title>
@@ -18,7 +22,13 @@
       </a>
       <div class="user-img">
         <div class="user">
-          <img src="img/user.png" alt="" />
+          <img src="img/user.png" class="open-user-manage"  alt="" />
+        </div>
+        <div class="user-session">
+          <div class="user-manages">
+            <a href="https://admin.bitruni.com/profile" class="account"><i class="ri-user-line"></i>Account</a>
+            <a href="https://admin.bitruni.com/logout" class="logout"><i class="ri-pencil-line"></i> Logout</a>
+          </div>
         </div>
       </div>
     </header>
@@ -141,7 +151,7 @@
         </div>
       </section>
     </main>
-    <script src="deposit.min.js">
+    <script src="deposit.js">
     </script>
   </body>
 </html>

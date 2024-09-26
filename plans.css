@@ -33,10 +33,15 @@ body {
 }
 
 .user-img {
-  margin-top: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10%;
+  transform: translateX(-30px);
   cursor: pointer;
 }
+
 
 .user-img .user {
   display: grid;
@@ -48,6 +53,106 @@ body {
 }
 .user img {
   width: 100%;
+  z-index: 1000;
+}
+
+.user-session {
+  position: absolute;
+  top:110%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-30px);
+  background-color: #222121;
+  width: 100% !important;
+  min-width: 100px;
+  height: 120%;
+  box-shadow: 0 0px 10px #ffd90025;
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ visibility: hidden;
+  opacity: 0;
+  transition:  0.3s ease;
+  z-index: 100;
+}
+
+.user-session.show-dropdown{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.user-manages {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  justify-content: start;
+  align-items: start;
+  padding: 1em;
+  
+}
+
+.user-manages .account,
+.user-manages .logout{
+  padding: .10em .15rem;
+  width: 100px !important;
+  clear: both;
+  white-space: nowrap;
+  background-color: transparent;
+  padding-left: 1em;
+  transition: .5s ease;
+}
+
+.account,
+.logout,
+.account i,
+.logout i{
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 200;
+  
+}
+
+.account:hover,
+.logout:hover {
+  background-color: #333;
+}
+.account i,
+.logout i{
+  margin-right: 10px;
+}
+
+/* Breakpoints for dropdown */
+
+@media  screen and (max-width : 1200px) {
+  .user-session{
+    width: 120%;
+    min-width: 120%;
+  }
+}
+
+@media  screen and (max-width : 780px) {
+  .user-session{
+    width: 130%;
+    min-width: 130px;
+  }
+}
+@media  screen and (max-width : 640px) {
+  .user-session{
+    transform: translateX(-50px);
+  }
+}
+@media  screen and (max-width : 500px) {
+  .user-session{
+    transform: translateX(-60px);
+  }
+}
+@media  screen and (max-width : 395px) {
+  .user-session{
+    transform: translateX(-70px);
+  }
 }
 .grid {
   display: grid;
