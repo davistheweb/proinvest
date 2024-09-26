@@ -31,6 +31,7 @@ body {
   padding: 2em 2.5em;
   border-radius: 15px;
   box-shadow: 0 0px 10px #ffd90023;
+  place-items: center;
 }
 .pane {
   background-color: #ffd700;
@@ -59,4 +60,11 @@ body {
     width: 270px;
     padding: 20px 10px;
   }
+}
+
+@media screen and (max-width:361px) {
+  .pane_container_content{
+   width: 90%;
+    justify-content: center;
+}
 }
