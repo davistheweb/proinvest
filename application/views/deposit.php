@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="icon" href="<?= base_url('bitruni-asset/img/logo.png'); ?>">
+    <link rel="stylesheet" href="<?= base_url('bitruni-asset/css/deposit.css'); ?>">
+    <title>Bitruni | Deposit</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="http://bitruni.com" class="logo">
+        <img src="<?= base_url('bitruni-asset/img/logo.png'); ?>" alt="" />
+      </a>
+      <div class="user-img">
+        <div class="user">
+          <img src="<?= base_url('bitruni-asset/img/user.png'); ?>" class="open-user-manage"  alt="" />
+        </div>
+        <div class="user-session">
+          <div class="user-manages">
+            <a href="<?= base_url('profile'); ?>" class="account"><i class="ri-user-line"></i>Account</a>
+            <a href="<?= base_url('logout'); ?>" class="logout"><i class="ri-pencil-line"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="deposit">
+        <div class="deposit-content_container">
+          <div class="deposit-header">
+            <h4 class="deposit_text">Deposit</h4>
+          </div>
+          <div class="wallet-address">
+            <p class="guide">Use any of the address to make transactions</p>
+            <div class="address">
+              <div class="barcode">
+                <img src="<?= base_url('bitruni-asset/img/BIT.jpg'); ?>" alt="bitcoin" class="code" />
+              </div>
+              <div class="address-code">
+                <div class="copy-button-container">
+                  <div class="copy-button-mobile">
+                    <span class="copi copy-bit"
+                      >Copy Address <i class="fas fa-copy"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="wallet-code-text">
+                  <h4 class="wallet-code bit-code">
+                    bc1ql5pw2wqe79p3qy249vsm4rjekw67ea0v7p5t2s
+                  </h4>
+                  <span class="copy_text bit-copy">
+                    <i class="fas fa-copy"></i>
+                    <span class="tooltip-text">Copy Address</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="address">
+              <div class="barcode">
+                <img src="<?= base_url('bitruni-asset/img/ETH.jpg'); ?>" alt="eth" class="code" />
+              </div>
+              <div class="address-code">
+                <div class="copy-button-container">
+                  <div class="copy-button-mobile">
+                    <span class="copi copy-eth"
+                      >Copy Address<i class="fas fa-copy"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="wallet-code-text">
+                  <h4 class="wallet-code eth-code">
+                    0xabc12b3c77147807037d792a250c13881ba35bb3
+                  </h4>
+                  <span class="copy_text eth-copy">
+                    <i class="fas fa-copy"></i>
+                    <span class="tooltip-text">Copy Address</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="address">
+              <div class="barcode">
+                <img src="<?= base_url('bitruni-asset/img/USDT.jpg'); ?>" alt="usdt" class="code" />
+              </div>
+              <div class="address-code">
+                <div class="copy-button-container">
+                  <div class="copy-button-mobile">
+                    <span class="copi copy-usdt"
+                      >Copy Address <i class="fas fa-copy"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="wallet-code-text wallet-usdt">
+                  <h4 class="wallet-code usdt-code">
+                    TCmevzMKV62arnKZXjaKVAzN8b6vszA4hX
+                  </h4>
+                  <span class="copy_text usdt-copy">
+                    <i class="fas fa-copy"></i>
+                    <span class="tooltip-text">Copy Address</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="deposit-section">
+              <form id="uploadReciept">
+                <div class="upload-reciept">
+                  <div class="alertUser">
+                    <div class="alert-message">
+                      <h4 class="message-type">Success</h4>
+                      <h4 class="message-text success-sent">
+                        Reciept Sent Successfully
+                      </h4>
+                      <div class="close">
+                        <span> <i class="fas fa-close"></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="upload-reciept-parent">
+                    <label id="customFileButton" for="fileInput"
+                      >Upload Reciept</label
+                    >
+                    <span id="fileName">No reciept uploaded</span>
+                    <input type="file" id="fileInput" />
+                  </div>
+                  <div class="user">
+                    <input
+                      type="text"
+                      placeholder="Telegram username or email"
+                      id="username_email"
+                      required
+                    />
+                  </div>
+                  <div class="upload-button-parent">
+                    <button class="submit-button" type="submit">
+                      I have Deposited
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="<?= base_url('bitruni-asset/js/deposit.min.js'); ?>">
+    </script>
+  </body>
+</html>

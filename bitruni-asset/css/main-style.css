@@ -34,7 +34,7 @@ body {
   place-items: center;
 }
 .pane {
-  background-color: #ffd700;
+  background-color: #ffd700 ;
   width: 200px;
   height: 50px;
   margin-top: 5px;

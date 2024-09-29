@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="icon" href="<?= base_url('bitruni-asset/img/logo.png'); ?>" />
+    <link rel="stylesheet" href="<?= base_url('bitruni-asset/css/plans.css'); ?>" />
+    <title>Bitruni | Plans</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="http://bitruni.com" class="logo">
+        <img src="<?= base_url('bitruni-asset/img/logo.png'); ?>" alt="" />
+      </a>
+      <div class="user-img">
+        <div class="user">
+          <img src="<?= base_url('bitruni-asset/img/user.png'); ?>" class="open-user-manage"  alt="" />
+        </div>
+        <div class="user-session">
+          <div class="user-manages">
+            <a href="<?= base_url('profile'); ?>" class="account"><i class="ri-user-line"></i>Account</a>
+            <a href="<?= base_url('logout'); ?>" class="logout"><i class="ri-pencil-line"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="tiers">
+      <div class="tier-container grid">
+        <div class="tier-heading">
+          <h1 class="tier-plan">INVESTMENT PLANS</h1>
+        </div>
+        <div class="tier-contents grid">
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">TIER 1</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$100</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$1000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Profit</h4>
+                <h4 class="tier-child">15%</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Duration</h4>
+                <h4 class="tier-child">24hrs</h4>
+              </div>
+            </a>
+          </div>
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">TIER 2</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$1001</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$10,000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Profit</h4>
+                <h4 class="tier-child">35%</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Duration</h4>
+                <h4 class="tier-child">24hrs</h4>
+              </div>
+            </a>
+          </div>
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">TIER 3</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$10,001</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$100,000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Profit</h4>
+                <h4 class="tier-child">85%</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Duration</h4>
+                <h4 class="tier-child">24hrs</h4>
+              </div>
+            </a>
+          </div>
+          <div class="tier-box">
+            <a href="deposit.html">
+              <h1 class="tier-title">PRO TRADER</h1>
+              <div class="tier-content">
+                <h4 class="tier-parent">Min Deposit</h4>
+                <h4 class="tier-child">$50,000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">Max Deposit</h4>
+                <h4 class="tier-child">$1000</h4>
+              </div>
+              <div class="tier-content">
+                <h4 class="tier-parent">6hrsRuns for</h4>
+                <h4 class="tier-child">14days</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="<?= base_url('bitruni-asset/js/plan.min.js'); ?>"></script>
+  </body>
+</html>

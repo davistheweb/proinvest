@@ -1,0 +1,8 @@
+/vendor/
+/application/cache/*
+/application/logs/*
+/application/config/database.php
+/application/config.php
+/composer.lock
+/contributing.md
+/bitruni-assetss
