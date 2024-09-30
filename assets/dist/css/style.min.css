@@ -107,9 +107,10 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.4;
-  color: #757575;
+  color: #fff;
   text-align: left;
-  background-color: rgb(239, 241, 244)
+/*   background-color: rgb(239, 241, 244)
+ */  background-color:#333 !important;
 }
 
 [tabindex="-1"]:focus {
@@ -194,13 +195,13 @@ sup {
 }
 
 a {
-  color: #512DA8;
+  color: #fff;
   text-decoration: none;
   background-color: transparent
 }
 
 a:hover {
-  color: #3e2280;
+  color: #eee;
   text-decoration: none
 }
 
@@ -381,7 +382,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 1.8rem;
   font-weight: 400;
   line-height: 1.2;
-  color: #212121
+/*   color: #212121; */
+  color: #fff !important;
 }
 
 h1, .h1 {
@@ -2999,7 +3001,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   color: #757575;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #3c3c3c;
   background-clip: padding-box;
   border: 0 solid transparent;
   border-radius: .4rem;
@@ -3164,7 +3166,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   padding: .7rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #fff;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -4414,7 +4416,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #333;
   background-clip: border-box;
   border: 0px solid transparent;
   border-radius: .4rem
@@ -4834,7 +4836,9 @@ a.badge-primary:focus, a.badge-primary.focus {
 
 .badge-secondary {
   color: #fff;
-  background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea)
+/*   background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea) */
+  background-color: #333;
+  
 }
 
 a.badge-secondary:hover, a.badge-secondary:focus {
@@ -6406,7 +6410,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #512DA8 !important
+  background-color: #3b3b3b !important
 }
 
 a.bg-primary:hover, a.bg-primary:focus, button.bg-primary:hover, button.bg-primary:focus {
@@ -10658,7 +10662,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #212121 !important
+  color: #eee !important
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -13025,7 +13029,7 @@ a:hover, a:focus {
   position: relative;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 3.2rem;
-  background-color: #fff;
+  background-color: #3c3c3c !important;
   border-radius: .4rem
 }
 
@@ -14296,7 +14300,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
   position: relative;
   z-index: 99;
   height: 72px;
-  background-color: #f4f4f4;
+  background-color: #333;
   transition: all 0.2s ease
 }
 
@@ -14412,7 +14416,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
 
 .dt-brand {
   width: 210px;
-  background: white;
+  background:#333;
   padding: 0 2rem;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -14523,7 +14527,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
 }
 
 .dt-nav__link {
-  color: black;
+  color: #fff;
   display: inline-block
 }
 
@@ -14589,7 +14593,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   border-radius: 2px;
-  background-color: grey
+  background-color:#fff
 }
 
 .hamburger-inner {
@@ -14634,9 +14638,10 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
   transform: rotate(225deg)
 }
 
-.dt-active {
-  background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea)!important;
-  color: #FFF!important;
+.dt-active {/* 
+  background: linear-gradient(to right top, #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea)!important; */
+  background: #fff !important;
+  color: #000 !important;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   padding-right: 40px!important;
@@ -15480,7 +15485,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: white;
+  background:#333;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 10px 0px;
   transition: all 0.2s ease;
 }
@@ -15569,7 +15574,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
 }
 
 .dt-side-nav>.dt-side-nav__item.selected>a, .dt-side-nav>.dt-side-nav__item.open>a {
-  color: rgb(32, 42, 54)
+  color: #fff
 }
 
 .dt-side-nav>.dt-side-nav__item>.dt-side-nav__sub-menu {
@@ -15819,8 +15824,8 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
 }
 
 .dt-footer {
-  background-color: #f4f4f4;
-  color: #757575;
+  background-color: #333;
+  color: #fff;
   padding: 1.2rem 3.2rem;
   display: -ms-flexbox;
   display: flex;
