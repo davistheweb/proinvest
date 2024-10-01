@@ -19783,7 +19783,7 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
   /*position: fixed;*/
   height: 100%;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: #3c3c3c;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -19882,8 +19882,9 @@ a.text-light-cyan:hover, a.text-light-cyan:focus {
 
 .dt-login__content-footer {
   padding: .8rem 3.2rem;
-  background-color: #f4f4f4
+  background-color: #333
 }
+
 
 .dt-login__title {
   position: relative;
