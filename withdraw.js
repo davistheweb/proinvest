@@ -69,8 +69,7 @@ const displayMessages = (messageBody, closeMessage) => {
           chat_id: chatId,
           text: message,
         }),
-      })
-        .then((response) => response.json())
+      }).then((response) => response.json())
         .then((data) => {
           if (data.ok) {
             messageType.textContent = "Successful";
