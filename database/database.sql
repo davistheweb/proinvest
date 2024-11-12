@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2020 at 01:01 PM
--- Server version: 8.0.19
--- PHP Version: 7.3.8
+-- Generation Time: Nov 12, 2024 at 06:58 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `proinvest24`
+-- Database: `dpbymujp_newpaid`
 --
 
 -- --------------------------------------------------------
@@ -32,9 +31,148 @@ CREATE TABLE `ci_sessions` (
   `id` varchar(40) NOT NULL DEFAULT '0',
   `ip_address` varchar(45) NOT NULL DEFAULT '0',
   `user_agent` varchar(120) DEFAULT NULL,
-  `timestamp` int UNSIGNED NOT NULL DEFAULT '0',
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `data` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `user_agent`, `timestamp`, `data`) VALUES
+('03g4a90huop8601oekiheqq1s3uh868o', '::1', NULL, 1727572161, '__ci_last_regenerate|i:1727572161;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-28 21:16:50\";isLoggedIn|b:1;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('0bc7p5752tn5k9angcsgsrsqsnjsj8bh', '::1', NULL, 1727371917, '__ci_last_regenerate|i:1727371917;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";isLoggedIn|b:1;'),
+('0q5lqj4763e5efoaqqj8nsf8lievmnj6', '::1', NULL, 1726997700, '__ci_last_regenerate|i:1726997700;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('1bk613ind425o0ksc70k44sit201c4nq', '::1', NULL, 1727621001, '__ci_last_regenerate|i:1727621001;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:37:23\";isLoggedIn|b:1;'),
+('1pam0nh2csc40p7uu3gasampkfolf4vr', '::1', NULL, 1731389474, '__ci_last_regenerate|i:1731389474;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-11-12 05:26:14\";isLoggedIn|b:1;__ci_vars|a:2:{s:7:\"success\";s:3:\"old\";s:6:\"errors\";s:3:\"new\";}success|s:20:\"Updated successfully\";errors|s:0:\"\";'),
+('1tkucqudaju1867aiugq1g5qf7k6ml53', '::1', NULL, 1727408296, '__ci_last_regenerate|i:1727408296;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('21h51v1cdr6atod68ips2eu4mmpo5hcv', '::1', NULL, 1727687799, '__ci_last_regenerate|i:1727687799;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('287r165g67k056o6fistmh5mqnsl327s', '::1', NULL, 1727028233, '__ci_last_regenerate|i:1727028233;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('2kcrvuou1lmg4roenci98dsoks1gno4c', '::1', NULL, 1727000621, '__ci_last_regenerate|i:1727000370;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";isLoggedIn|b:1;error|s:0:\"\";__ci_vars|a:1:{s:5:\"error\";s:3:\"old\";}'),
+('2mqfaccka7e50ag3h1j02i2rh19qim23', '::1', NULL, 1727685353, '__ci_last_regenerate|i:1727685353;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('2vk3c1iek6hr92slel0q85923ia6sm57', '::1', NULL, 1727557328, '__ci_last_regenerate|i:1727557328;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('2vqes8q5eifjsljgn4f8ojbsp3f24bkt', '::1', NULL, 1727572414, '__ci_last_regenerate|i:1727572161;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-28 21:16:50\";isLoggedIn|b:1;'),
+('3704k43086uif524k0t3f352cg2n9j3m', '::1', NULL, 1727043531, '__ci_last_regenerate|i:1727043530;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('3e56d1sal4ljtuq2ho0pcbo00nr2o4e1', '::1', NULL, 1727410592, '__ci_last_regenerate|i:1727410592;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('3k63jma1oi4iefhcqpna9masp756nso1', '::1', NULL, 1726998996, '__ci_last_regenerate|i:1726998996;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";isLoggedIn|b:1;'),
+('4caavs5ktumqp9mk9kfe6jtor3pk4p1e', '::1', NULL, 1727404736, '__ci_last_regenerate|i:1727404736;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('4rtek4e8uoun9m6bq1a66scogg30v5m1', '::1', NULL, 1727624384, '__ci_last_regenerate|i:1727624384;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 15:32:02\";isLoggedIn|b:1;'),
+('4vra1qaetikvcch5e8br848i87pv2jvj', '::1', NULL, 1727623820, '__ci_last_regenerate|i:1727623683;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:45:46\";isLoggedIn|b:1;site_lang|s:7:\"English\";'),
+('55beo19gq6tf003ssnr3n7ub53vb19f4', '::1', NULL, 1730301705, '__ci_last_regenerate|i:1730301705;userId|s:2:\"62\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";isLoggedIn|b:1;'),
+('595n0sedue3i6t7di3hmsm273gjggshm', '::1', NULL, 1727022685, '__ci_last_regenerate|i:1727022685;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('5evntv1l5a6pu6b5642r0t03pufru5a5', '::1', NULL, 1727623683, '__ci_last_regenerate|i:1727623683;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:45:46\";isLoggedIn|b:1;site_lang|s:7:\"English\";'),
+('5qidvvq64cuneq8sjde6qh04jvq1kh8l', '::1', NULL, 1727688174, '__ci_last_regenerate|i:1727688174;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('5t1bu2lfc5fhhvg4p8l0g1ggr31vsvtn', '::1', NULL, 1727406905, '__ci_last_regenerate|i:1727406905;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('5ta6d95c3lnrt4havde74oi03he3ci1g', '::1', NULL, 1727623794, '__ci_last_regenerate|i:1727623794;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-29 15:20:31\";isLoggedIn|b:1;'),
+('613giiqu2si94rf2k7gge3tatrkv6t1f', '::1', NULL, 1727681372, '__ci_last_regenerate|i:1727681372;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('6eo781j616u7uhbc8uhic96b86sqcjj0', '::1', NULL, 1727412605, '__ci_last_regenerate|i:1727412605;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 04:39:24\";isLoggedIn|b:1;'),
+('6nfi0j3g0bsc9q66fugeultp38cu92fj', '::1', NULL, 1727020180, '__ci_last_regenerate|i:1727020179;'),
+('6v44mui03krddstdntlqueq8el03l78g', '::1', NULL, 1730302116, '__ci_last_regenerate|i:1730302116;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-10-30 15:18:03\";isLoggedIn|b:1;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('7hg4g8matqcuf2pltemqm0gc5kbb0235', '::1', NULL, 1727684203, '__ci_last_regenerate|i:1727684203;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('7sdghukesgocki0pas0agcoc6qv1l5fj', '::1', NULL, 1727670643, '__ci_last_regenerate|i:1727670643;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('8b1t57mlbltmraqa4vmeivs9ggmmeejr', '::1', NULL, 1727020454, '__ci_last_regenerate|i:1727020454;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 15:47:50\";isLoggedIn|b:1;'),
+('8tnli2bbi7sqlsuksqrl3904or27l3u3', '::1', NULL, 1727415023, '__ci_last_regenerate|i:1727415023;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 05:14:20\";isLoggedIn|b:1;'),
+('923emr5p0mnf3eteg9jih18543ai73l1', '::1', NULL, 1727021317, '__ci_last_regenerate|i:1727021317;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('99qs9pa9e6fujt1kh6ie2fvub734uuai', '::1', NULL, 1727020576, '__ci_last_regenerate|i:1727020576;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('9gl3svcfrmmjmefc0jd3jm8dqch5e8b5', '::1', NULL, 1726994733, '__ci_last_regenerate|i:1726994733;userId|s:2:\"57\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:2:\"my\";lastName|s:4:\"name\";isLoggedIn|b:1;'),
+('a1ul93dimqtl8vj1n1emte55q5p1h58u', '::1', NULL, 1727020917, '__ci_last_regenerate|i:1727020917;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('a60a6hvra61793h5fofnu8lkepgjm3g3', '::1', NULL, 1727408653, '__ci_last_regenerate|i:1727408653;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('a88301pgpjl885pqvof3jhnea9p99edo', '::1', NULL, 1727621915, '__ci_last_regenerate|i:1727621915;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:45:46\";isLoggedIn|b:1;'),
+('a8rgaahh918gkb8dbtc6fo4ohcqnm4u9', '::1', NULL, 1727682308, '__ci_last_regenerate|i:1727682308;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('aa839mg1cpqs2bncfisd38g63bdqm6uu', '::1', NULL, 1726998011, '__ci_last_regenerate|i:1726998011;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('aiktj75mcuctucdvahs0meacu8cs0hoc', '::1', NULL, 1727645734, '__ci_last_regenerate|i:1727645504;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 21:35:34\";isLoggedIn|b:1;'),
+('amj52ngfavv9af3fr40fq2uah36kvgt2', '::1', NULL, 1727669843, '__ci_last_regenerate|i:1727669843;'),
+('ampgktja980cd3t3fjeoe38jbcskun3f', '::1', NULL, 1727021290, '__ci_last_regenerate|i:1727021290;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 15:47:50\";isLoggedIn|b:1;'),
+('b3cfaa4akrmi7i8lkjdm54apig120l0t', '::1', NULL, 1730301068, '__ci_last_regenerate|i:1730301068;'),
+('b9297cf3itnioq0or75hdnb85g3ie83a', '::1', NULL, 1727000371, '__ci_last_regenerate|i:1727000370;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";isLoggedIn|b:1;'),
+('bg4fesj292i2vld56jvbll2g8va8refu', '::1', NULL, 1726996875, '__ci_last_regenerate|i:1726996875;userId|s:2:\"58\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:3:\"jos\";lastName|s:5:\"hello\";isLoggedIn|b:1;'),
+('bhlghoad82843979f7qpifjdopf483p8', '::1', NULL, 1727409886, '__ci_last_regenerate|i:1727409886;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('c0l8882n5la3tbm54qnll59ce6rit83t', '::1', NULL, 1727023939, '__ci_last_regenerate|i:1727023939;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('c0o4hm9gon43t2m74p667ojrr9ll9j1a', '::1', NULL, 1727555988, '__ci_last_regenerate|i:1727555725;userId|s:2:\"61\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:3:\"dmg\";lastName|s:4:\"king\";isLoggedIn|b:1;'),
+('c6i8a59jftjeso3lo8jh4aglct5otjc6', '::1', NULL, 1731390456, '__ci_last_regenerate|i:1731390455;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-11-12 05:26:14\";isLoggedIn|b:1;'),
+('cbhglkm874ld7jim8tifrtjrpgclpqri', '::1', NULL, 1727043530, '__ci_last_regenerate|i:1727043530;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('cc3uqfvbuf9hvbubh9k7srmldmvk6335', '::1', NULL, 1731390490, '__ci_last_regenerate|i:1731390472;userId|s:2:\"63\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:9:\"Josahkeke\";lastName|s:4:\"Kele\";ppic|N;lastLogin|s:19:\"2024-11-12 05:31:01\";isLoggedIn|b:1;error|s:0:\"\";__ci_vars|a:1:{s:5:\"error\";s:3:\"old\";}'),
+('cf0mtqs02o8jckph54ptoaon14bnedcd', '::1', NULL, 1726997162, '__ci_last_regenerate|i:1726997097;'),
+('cga4s0c9io4cnobc87nq1kiooehdimer', '::1', NULL, 1730301401, '__ci_last_regenerate|i:1730301401;userId|s:2:\"62\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";isLoggedIn|b:1;'),
+('co0m0n55e5b6vgnovgd0trvr4j5fqcdi', '::1', NULL, 1727024290, '__ci_last_regenerate|i:1727024290;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 15:47:50\";isLoggedIn|b:1;'),
+('cqans1g17o27f359ul6r96thhorfll2u', '::1', NULL, 1727671028, '__ci_last_regenerate|i:1727671028;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('csbk9o0o4d8le8rtfiqjqaqvc8fb1til', '::1', NULL, 1727414691, '__ci_last_regenerate|i:1727414691;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 05:14:20\";isLoggedIn|b:1;'),
+('dcp4ceu85kuce6e5t7ksb00696ivpnq4', '::1', NULL, 1727417784, '__ci_last_regenerate|i:1727417694;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 05:14:20\";isLoggedIn|b:1;'),
+('djniuhl8b1d3frpvhiqkns9d009r6dnn', '::1', NULL, 1727620616, '__ci_last_regenerate|i:1727620616;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-29 14:20:42\";isLoggedIn|b:1;'),
+('dv71u8es27vnb4vuqj6lqso8uahed6us', '::1', NULL, 1727714959, '__ci_last_regenerate|i:1727714959;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('e77655qhumnp7cscdt6cojibd7rp5nvn', '::1', NULL, 1726998534, '__ci_last_regenerate|i:1726998534;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";isLoggedIn|b:1;'),
+('efj4l5oobnrv3od9v2ht15j0dfuvp5hq', '::1', NULL, 1727621535, '__ci_last_regenerate|i:1727621535;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:45:46\";isLoggedIn|b:1;'),
+('egs7950u7ne6a30q1l2uqug3klmbljht', '::1', NULL, 1731390455, '__ci_last_regenerate|i:1731390455;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-11-12 05:26:14\";isLoggedIn|b:1;'),
+('ehsgl071g2j659ri7imm4q049qhad59k', '::1', NULL, 1727716068, '__ci_last_regenerate|i:1727716068;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('f8os12d4juuai9mc3cmvvfddpaakd7u6', '::1', NULL, 1727176793, '__ci_last_regenerate|i:1727176727;'),
+('ffqmooifodu4rm5dm2akes7dv0694bjt', '::1', NULL, 1727403285, '__ci_last_regenerate|i:1727403285;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('fht7nt4g6c4skmi6ajbq6tlh6804rkjd', '::1', NULL, 1727020164, '__ci_last_regenerate|i:1727020143;'),
+('fo4moru9renkv4bu7ag38vjrjigfvsg4', '::1', NULL, 1727681784, '__ci_last_regenerate|i:1727681784;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('fpipnet5i41occt9eagbojdhrj16p8eg', '::1', NULL, 1727411515, '__ci_last_regenerate|i:1727411515;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('g2g5dk905u9s8mj9vi4hc45h48g4tmad', '::1', NULL, 1727374462, '__ci_last_regenerate|i:1727374462;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";isLoggedIn|b:1;'),
+('g3uppotr8nijs8r2kdh5khs5luneofrj', '::1', NULL, 1727020822, '__ci_last_regenerate|i:1727020822;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 15:47:50\";isLoggedIn|b:1;'),
+('g6eiqu7qrqoo3i3h4laso58tk7ltd6n6', '::1', NULL, 1730301756, '__ci_last_regenerate|i:1730301705;userId|s:2:\"62\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";isLoggedIn|b:1;'),
+('g9v7f54dn6oo9lonh0qv8oll7pdscoal', '::1', NULL, 1727021962, '__ci_last_regenerate|i:1727021962;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('ga2aavr9r73ghkmsvc3pm87hcqf5so5p', '::1', NULL, 1727366365, '__ci_last_regenerate|i:1727366365;'),
+('gb1jkha25hg2licnnt4qvbb1k43ogbdj', '::1', NULL, 1727571781, '__ci_last_regenerate|i:1727571781;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-28 21:16:50\";isLoggedIn|b:1;'),
+('gl8susc5e2gpctp2e1vlrr3hev9f91o6', '::1', NULL, 1727686368, '__ci_last_regenerate|i:1727686368;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('gsnp4vp862g4lc00s88s42t64qg3ueuq', '::1', NULL, 1727417694, '__ci_last_regenerate|i:1727417694;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 05:14:20\";isLoggedIn|b:1;'),
+('h718q8a2s8efmnhc0j9diqc9siesrhv1', '::1', NULL, 1727572176, '__ci_last_regenerate|i:1727572176;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"new\";}'),
+('haocl7b8ddmqr4j5sq34cfad737u31mn', '::1', NULL, 1726995752, '__ci_last_regenerate|i:1726995752;userId|s:2:\"57\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:2:\"my\";lastName|s:4:\"name\";isLoggedIn|b:1;'),
+('hbo2ofsjelco54cebmjbhdu81qfujk79', '::1', NULL, 1727412266, '__ci_last_regenerate|i:1727412266;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 04:39:24\";isLoggedIn|b:1;'),
+('hecgctrgj17i17rebj2ahcja1nmtmgj4', '::1', NULL, 1727412986, '__ci_last_regenerate|i:1727412986;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 04:50:17\";isLoggedIn|b:1;'),
+('hleppb3rg7mta73plf0hf067fmlc3kqf', '::1', NULL, 1727554657, '__ci_last_regenerate|i:1727554657;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"old\";}'),
+('hqrso351o6gr2ukkfmvbeib03thm25o4', '::1', NULL, 1727670273, '__ci_last_regenerate|i:1727670273;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('ifml042gm4vo1rghimclsv3esa2v3866', '::1', NULL, 1727627787, '__ci_last_regenerate|i:1727627787;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-29 15:20:31\";isLoggedIn|b:1;'),
+('im2ahp5da41d68sbaimnb7nmqrp3vhn4', '::1', NULL, 1726996973, '__ci_last_regenerate|i:1726996875;userId|s:2:\"58\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:3:\"jos\";lastName|s:5:\"hello\";isLoggedIn|b:1;'),
+('iqnna8875835i43gs8chs5n445cpb62d', '::1', NULL, 1727558203, '__ci_last_regenerate|i:1727558203;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-28 21:03:16\";isLoggedIn|b:1;'),
+('irac5s097i70uli3t2d8vohb4n8cpgbe', '::1', NULL, 1727627787, '__ci_last_regenerate|i:1727627787;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-29 15:20:31\";isLoggedIn|b:1;'),
+('j027g96mlo5q701ufd53ovmedntqsjes', '::1', NULL, 1727411820, '__ci_last_regenerate|i:1727411820;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('jevlhh43ctj709tecs2688b1qmug4gbq', '::1', NULL, 1727688175, '__ci_last_regenerate|i:1727688174;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('jm0bir7adra3p4po86ot7r01oc9lhr7h', '::1', NULL, 1727374463, '__ci_last_regenerate|i:1727374462;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";isLoggedIn|b:1;'),
+('jr0295hghg3ovc6agn3er66tlmueo9na', '::1', NULL, 1727682652, '__ci_last_regenerate|i:1727682652;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('k4vn7u1v9fihi02ovtio74f2iod3lekg', '::1', NULL, 1727369718, '__ci_last_regenerate|i:1727369718;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-26 16:00:12\";isLoggedIn|b:1;'),
+('k8rj637eplbm4n90rd0tvnn41vfpl9bk', '::1', NULL, 1726995037, '__ci_last_regenerate|i:1726995037;userId|s:2:\"57\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:2:\"my\";lastName|s:4:\"name\";isLoggedIn|b:1;'),
+('kahe3tflc7otpb6r7t3d9akgj5cs6jav', '::1', NULL, 1726997074, '__ci_last_regenerate|i:1726997074;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('kf88ifunm319bkvh21pn1h3evk51vdbe', '::1', NULL, 1726998526, '__ci_last_regenerate|i:1726998526;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('l6m07as7ha9b43jlkh2omv91th14sc0q', '::1', NULL, 1727671349, '__ci_last_regenerate|i:1727671349;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-30 04:20:24\";isLoggedIn|b:1;'),
+('llrgdvbsbal6lj3g4klmdrq0m9l8s1b3', '::1', NULL, 1727409575, '__ci_last_regenerate|i:1727409575;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('lmvjfg0ip9s05q6n2h4buu5gjnnt0s84', '::1', NULL, 1727554680, '__ci_last_regenerate|i:1727554657;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-28 20:17:41\";isLoggedIn|b:1;'),
+('lqpt9gns9h11ep8v69gdchiruoamhare', '::1', NULL, 1727622822, '__ci_last_regenerate|i:1727622822;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:45:46\";isLoggedIn|b:1;'),
+('mcb7raju05qkh76ump2d402bd21fadms', '::1', NULL, 1726996283, '__ci_last_regenerate|i:1726996283;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('mcpcifja7fr502dk8bbc19ri418b8bcf', '::1', NULL, 1727684906, '__ci_last_regenerate|i:1727684906;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('n3hhbatu1rkljan7iqgtrpd1qkog2lse', '::1', NULL, 1727019291, '__ci_last_regenerate|i:1727019242;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 15:34:50\";isLoggedIn|b:1;'),
+('o258o3na5vh93hvvqfctndrbukvrpla8', '::1', NULL, 1726999313, '__ci_last_regenerate|i:1726999313;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";isLoggedIn|b:1;'),
+('o4s2sp4rei84ll85r7lv5bh2g9289r0o', '::1', NULL, 1726997935, '__ci_last_regenerate|i:1726997935;'),
+('odbb680u0btf76u4971qs4v8il2deg4s', '::1', NULL, 1727409022, '__ci_last_regenerate|i:1727409022;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('ods9cudvh9dfj1nhba00ec82u8oouoqs', '::1', NULL, 1727626540, '__ci_last_regenerate|i:1727626539;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-29 15:20:31\";isLoggedIn|b:1;'),
+('ovttov12c4n4kfcp3oh6qrmuklh720c3', '::1', NULL, 1727686730, '__ci_last_regenerate|i:1727686730;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('p0239c2khis0f36gji8c5s3ba3cmvci6', '::1', NULL, 1727558816, '__ci_last_regenerate|i:1727558816;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-28 21:16:50\";isLoggedIn|b:1;'),
+('p34hdqk0i66jus12qdutiknu4ujft1n5', '::1', NULL, 1727402597, '__ci_last_regenerate|i:1727402597;'),
+('pbkjaqm69eetrihdm18c26700u8v6h9j', '::1', NULL, 1727623361, '__ci_last_regenerate|i:1727623361;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:45:46\";isLoggedIn|b:1;site_lang|s:7:\"Russian\";'),
+('pjoavm8b0iomjegbargainhgku1rf8pj', '::1', NULL, 1727405111, '__ci_last_regenerate|i:1727405111;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('pu8n1ba1g6qotckuceeebjiucnf5nam5', '::1', NULL, 1726998982, '__ci_last_regenerate|i:1726998981;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('qpmshunof72hckjv85tsd2v7pc1m59e4', '::1', NULL, 1727685668, '__ci_last_regenerate|i:1727685668;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('r1l83in47a69p1mgdoalgdjkpc5icsb6', '::1', NULL, 1727413494, '__ci_last_regenerate|i:1727413494;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 04:50:17\";isLoggedIn|b:1;'),
+('r7nkdrp96kbv15emealpshhnsm8ptdeo', '::1', NULL, 1730302116, '__ci_last_regenerate|i:1730302116;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-10-30 15:18:03\";isLoggedIn|b:1;'),
+('ra7v63qakr1dn7rs3f77odqvj5dvfoee', '::1', NULL, 1727619441, '__ci_last_regenerate|i:1727619427;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-29 14:17:21\";isLoggedIn|b:1;'),
+('rdjr360m5spseim5bdjk8vut0pvj6dc5', '::1', NULL, 1727058601, '__ci_last_regenerate|i:1727058390;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-23 02:26:50\";isLoggedIn|b:1;'),
+('rl1m0180lsijm4vo7dbcvjldv7m91iph', '::1', NULL, 1727407853, '__ci_last_regenerate|i:1727407853;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('s7lvrddbom5n0tv7r0euc32f82bbd7ja', '::1', NULL, 1727404085, '__ci_last_regenerate|i:1727404085;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 02:03:25\";isLoggedIn|b:1;'),
+('sdo44nd52v0cdrkes26fj4kr6e8d4dtr', '::1', NULL, 1731390472, '__ci_last_regenerate|i:1731390472;userId|s:2:\"63\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:9:\"Josahkeke\";lastName|s:4:\"Kele\";ppic|N;lastLogin|s:19:\"2024-11-12 05:31:01\";isLoggedIn|b:1;'),
+('skmefovjaaa1d08ke0j060es3ercvdeh', '::1', NULL, 1727023066, '__ci_last_regenerate|i:1727023066;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('supm0is7dodhbktkn5e2lpb7l3l9tg7i', '::1', NULL, 1727023398, '__ci_last_regenerate|i:1727023398;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('t30e58pvl8mbk2hlepl0esh65bpo6qd3', '::1', NULL, 1727715767, '__ci_last_regenerate|i:1727715767;errors|s:0:\"\";__ci_vars|a:1:{s:6:\"errors\";s:3:\"old\";}'),
+('t4pk0nt5tglkreh0db2uaregmc7gfb1q', '::1', NULL, 1727687470, '__ci_last_regenerate|i:1727687470;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('t7pd5ol41uuogm3gvdlsbame8ui45e58', '::1', NULL, 1727684573, '__ci_last_regenerate|i:1727684573;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 07:54:34\";isLoggedIn|b:1;'),
+('tfkm948fmktl5evalpn7g8s1h40qmk5f', '::1', NULL, 1727024290, '__ci_last_regenerate|i:1727024290;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 15:47:50\";isLoggedIn|b:1;'),
+('u0giu4fbl7bbh2cp798np2t168siej3i', '::1', NULL, 1727623216, '__ci_last_regenerate|i:1727623216;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 14:37:23\";isLoggedIn|b:1;'),
+('u36m7jj09i17acl38ii9377r35s73b2l', '::1', NULL, 1727413873, '__ci_last_regenerate|i:1727413873;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-27 04:50:17\";isLoggedIn|b:1;'),
+('u5vvr5ftfmjek9u47h5ngokb9g1klf3a', '::1', NULL, 1727624384, '__ci_last_regenerate|i:1727624384;userId|s:2:\"60\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:6:\"josiah\";lastName|s:5:\"davis\";ppic|N;lastLogin|s:19:\"2024-09-29 15:32:02\";isLoggedIn|b:1;'),
+('ua1i9rldom5d3sd361eiahlg3aeiaod2', '::1', NULL, 1727022306, '__ci_last_regenerate|i:1727022306;userId|s:2:\"59\";role|s:1:\"3\";roleText|s:6:\"Client\";firstName|s:7:\"testing\";lastName|s:4:\"site\";ppic|N;lastLogin|s:19:\"2024-09-22 15:50:35\";isLoggedIn|b:1;'),
+('uh6kuljidp3opc51dif0mu7boaqe7qm5', '::1', NULL, 1727716264, '__ci_last_regenerate|i:1727716068;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-30 17:07:56\";isLoggedIn|b:1;'),
+('utv0mctrievjlep7725em9qeh1mvg6o5', '::1', NULL, 1726996696, '__ci_last_regenerate|i:1726996696;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;'),
+('vjk67gik0hc7ej8e6db2sua3g5300c90', '::1', NULL, 1726998981, '__ci_last_regenerate|i:1726998981;userId|s:1:\"1\";role|s:1:\"1\";roleText|s:20:\"System Administrator\";firstName|s:5:\"Admin\";lastName|s:9:\"Proinvest\";ppic|s:0:\"\";lastLogin|s:19:\"2024-09-22 09:03:35\";isLoggedIn|b:1;');
 
 -- --------------------------------------------------------
 
@@ -43,7 +181,7 @@ CREATE TABLE `ci_sessions` (
 --
 
 CREATE TABLE `tbl_addons_api` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `logo` varchar(128) NOT NULL,
   `public_key` varchar(128) NOT NULL,
@@ -60,11 +198,11 @@ CREATE TABLE `tbl_addons_api` (
   `base_url` varchar(128) NOT NULL,
   `env` varchar(128) NOT NULL,
   `currency` varchar(128) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `status` tinyint(1) NOT NULL DEFAULT 1,
   `type` varchar(255) NOT NULL,
-  `purchased` int NOT NULL DEFAULT '0',
+  `purchased` int(11) NOT NULL DEFAULT 0,
   `createdDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_addons_api`
@@ -89,19 +227,19 @@ INSERT INTO `tbl_addons_api` (`id`, `name`, `logo`, `public_key`, `secret_key`, 
 --
 
 CREATE TABLE `tbl_coinpayments` (
-  `id` int NOT NULL,
-  `userid` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
   `invoice` varchar(128) NOT NULL,
   `txnCode` varchar(128) NOT NULL,
   `address` varchar(128) NOT NULL,
   `method` varchar(128) NOT NULL,
-  `plan` int NOT NULL,
+  `plan` int(11) NOT NULL,
   `amount1` decimal(10,0) NOT NULL,
   `amount2` varchar(128) NOT NULL,
-  `status` int NOT NULL,
+  `status` int(11) NOT NULL,
   `expiry` datetime NOT NULL,
   `createdDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -110,11 +248,11 @@ CREATE TABLE `tbl_coinpayments` (
 --
 
 CREATE TABLE `tbl_content` (
-  `id` int NOT NULL,
-  `template` int DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `template` int(11) DEFAULT NULL,
   `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `value` blob
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `value` blob DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_content`
@@ -149,19 +287,19 @@ INSERT INTO `tbl_content` (`id`, `template`, `name`, `value`) VALUES
 --
 
 CREATE TABLE `tbl_deposits` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `txnCode` varchar(128) NOT NULL,
-  `userId` int NOT NULL,
+  `userId` int(11) NOT NULL,
   `amount` decimal(10,2) NOT NULL,
   `paymentMethod` varchar(128) NOT NULL,
-  `planId` int NOT NULL,
+  `planId` int(11) NOT NULL,
   `maturityDtm` datetime NOT NULL,
   `img` varchar(255) DEFAULT NULL,
   `deposit_account` varchar(255) DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '0',
-  `createdBy` int NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `createdBy` int(11) NOT NULL,
   `createdDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -170,15 +308,15 @@ CREATE TABLE `tbl_deposits` (
 --
 
 CREATE TABLE `tbl_earnings` (
-  `id` int NOT NULL,
-  `userId` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
   `type` varchar(128) NOT NULL,
-  `depositId` int NOT NULL,
+  `depositId` int(11) NOT NULL,
   `txnCode` varchar(128) NOT NULL,
   `amount` decimal(13,2) NOT NULL,
-  `email_sent` tinyint NOT NULL DEFAULT '0',
+  `email_sent` tinyint(4) NOT NULL DEFAULT 0,
   `createdDtm` datetime(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -187,16 +325,16 @@ CREATE TABLE `tbl_earnings` (
 --
 
 CREATE TABLE `tbl_email_templates` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `type` varchar(128) NOT NULL,
   `title` varchar(124) NOT NULL,
   `mail_subject` varchar(128) NOT NULL,
   `mail_body` blob NOT NULL,
-  `modifiedBy` int NOT NULL,
+  `modifiedBy` int(11) NOT NULL,
   `modifiedDtm` datetime NOT NULL,
   `createdDtm` datetime NOT NULL,
   `sms_body` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_email_templates`
@@ -225,11 +363,11 @@ INSERT INTO `tbl_email_templates` (`id`, `type`, `title`, `mail_subject`, `mail_
 --
 
 CREATE TABLE `tbl_faqs` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `question` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `answer` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `isActive` int NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `isActive` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_faqs`
@@ -246,20 +384,20 @@ INSERT INTO `tbl_faqs` (`id`, `question`, `answer`, `isActive`) VALUES
 --
 
 CREATE TABLE `tbl_languages` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `code` varchar(128) NOT NULL,
   `logo` varchar(255) NOT NULL,
-  `createdDtm` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `createdDtm` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_languages`
 --
 
-INSERT INTO `tbl_languages` (`id`, `name`, `code`, `logo`) VALUES
-(1, 'English', 'EN', 'gb-eng2.png'),
-(2, 'Russian', 'RU', 'russia3.png');
+INSERT INTO `tbl_languages` (`id`, `name`, `code`, `logo`, `createdDtm`) VALUES
+(1, 'English', 'EN', 'gb-eng2.png', '2024-09-22 08:36:20'),
+(2, 'Russian', 'RU', 'russia3.png', '2024-09-22 08:36:20');
 
 -- --------------------------------------------------------
 
@@ -268,10 +406,10 @@ INSERT INTO `tbl_languages` (`id`, `name`, `code`, `logo`) VALUES
 --
 
 CREATE TABLE `tbl_lang_modules` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `code` varchar(255) NOT NULL,
   `lang_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_lang_modules`
@@ -301,22 +439,61 @@ INSERT INTO `tbl_lang_modules` (`id`, `code`, `lang_name`) VALUES
 --
 
 CREATE TABLE `tbl_last_login` (
-  `id` bigint NOT NULL,
-  `userId` bigint NOT NULL,
+  `id` bigint(20) NOT NULL,
+  `userId` bigint(20) NOT NULL,
   `sessionData` varchar(2048) NOT NULL,
   `machineIp` varchar(1024) NOT NULL,
   `userAgent` varchar(128) NOT NULL,
   `agentString` varchar(1024) NOT NULL,
   `platform` varchar(128) NOT NULL,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_last_login`
 --
 
 INSERT INTO `tbl_last_login` (`id`, `userId`, `sessionData`, `machineIp`, `userAgent`, `agentString`, `platform`, `createdDtm`) VALUES
-(1, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 84.0.4147.135', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36', 'Mac OS X', '2020-09-01 16:00:22');
+(1, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 84.0.4147.135', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36', 'Mac OS X', '2020-09-01 16:00:22'),
+(2, 57, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"my\",\"lastName\":\"name\"}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 09:39:12'),
+(3, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 10:03:35'),
+(4, 58, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"jos\",\"lastName\":\"hello\"}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 10:11:13'),
+(5, 59, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"testing\",\"lastName\":\"site\"}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 10:39:26'),
+(6, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 16:34:50'),
+(7, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 16:47:50'),
+(8, 59, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"testing\",\"lastName\":\"site\",\"ppic\":null}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-22 16:50:35'),
+(9, 59, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"testing\",\"lastName\":\"site\",\"ppic\":null}', '::1', 'Chrome 128.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'Windows 10', '2024-09-23 03:26:50'),
+(10, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-26 17:00:12'),
+(11, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-26 17:55:49'),
+(12, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-26 18:00:00'),
+(13, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-27 03:03:25'),
+(14, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-27 05:39:03'),
+(15, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-27 05:39:24'),
+(16, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-27 05:50:17'),
+(17, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-27 06:14:20'),
+(18, 59, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"testing\",\"lastName\":\"site\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-28 21:17:41'),
+(19, 61, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"dmg\",\"lastName\":\"king\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-28 21:36:58'),
+(20, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36', 'Android', '2024-09-28 22:02:29'),
+(21, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-28 22:03:16'),
+(22, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-28 22:16:50'),
+(23, 59, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"testing\",\"lastName\":\"site\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:17:21'),
+(24, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:18:44'),
+(25, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:19:31'),
+(26, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:20:26'),
+(27, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:20:42'),
+(28, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:37:23'),
+(29, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 15:45:46'),
+(30, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 16:20:32'),
+(31, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 16:32:02'),
+(32, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-29 22:35:34'),
+(33, 60, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\",\"ppic\":null}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-30 05:20:24'),
+(34, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-30 08:54:34'),
+(35, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 129.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'Windows 10', '2024-09-30 18:07:56'),
+(36, 62, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josiah\",\"lastName\":\"davis\"}', '::1', 'Chrome 130.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Windows 10', '2024-10-30 16:15:29'),
+(37, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 130.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Windows 10', '2024-10-30 16:18:03'),
+(38, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"firstName\":\"Admin\",\"lastName\":\"Proinvest\",\"ppic\":\"\"}', '::1', 'Chrome 130.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Windows 10', '2024-11-12 06:26:14'),
+(39, 63, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"josah\",\"lastName\":\"kele\"}', '::1', 'Chrome 130.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Windows 10', '2024-11-12 06:28:54'),
+(40, 63, '{\"role\":\"3\",\"roleText\":\"Client\",\"firstName\":\"Josahkeke\",\"lastName\":\"Kele\",\"ppic\":null}', '::1', 'Chrome 130.0.0.0', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Windows 10', '2024-11-12 06:31:01');
 
 -- --------------------------------------------------------
 
@@ -325,16 +502,16 @@ INSERT INTO `tbl_last_login` (`id`, `userId`, `sessionData`, `machineIp`, `userA
 --
 
 CREATE TABLE `tbl_payeer` (
-  `id` int NOT NULL,
-  `userId` int NOT NULL,
-  `planId` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `planId` int(11) NOT NULL,
   `order_id` varchar(255) DEFAULT NULL,
   `amount` decimal(10,2) DEFAULT NULL,
   `currency` varchar(255) DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '0',
-  `modifiedDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` int(11) NOT NULL DEFAULT 0,
+  `modifiedDtm` datetime NOT NULL DEFAULT current_timestamp(),
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -343,41 +520,41 @@ CREATE TABLE `tbl_payeer` (
 --
 
 CREATE TABLE `tbl_payment_methods` (
-  `id` int NOT NULL,
-  `name` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `logo` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `name` varchar(128) DEFAULT NULL,
+  `logo` varchar(128) DEFAULT NULL,
   `type` varchar(255) NOT NULL,
-  `ref` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `API` int DEFAULT NULL,
-  `bank_name` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `account_name` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `account_number` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `swift_code` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `ref` varchar(128) DEFAULT NULL,
+  `API` int(11) DEFAULT NULL,
+  `bank_name` varchar(128) DEFAULT NULL,
+  `account_name` varchar(128) DEFAULT NULL,
+  `account_number` varchar(128) DEFAULT NULL,
+  `swift_code` varchar(128) DEFAULT NULL,
   `variableComm` decimal(10,2) DEFAULT NULL,
   `fixedComm` decimal(10,2) DEFAULT NULL,
   `transFee` decimal(10,2) DEFAULT NULL,
-  `iswithdrawable` int NOT NULL DEFAULT '0',
-  `note` varchar(1024) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `status` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `iswithdrawable` int(11) NOT NULL DEFAULT 0,
+  `note` varchar(1024) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_payment_methods`
 --
 
 INSERT INTO `tbl_payment_methods` (`id`, `name`, `logo`, `type`, `ref`, `API`, `bank_name`, `account_name`, `account_number`, `swift_code`, `variableComm`, `fixedComm`, `transFee`, `iswithdrawable`, `note`, `status`) VALUES
-(2, 'Stripe', 'stripe.jpg', 'auto', 'ST', 1, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(3, 'Bitcoin', 'bitcoin.png', 'auto', 'BTC', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(4, 'Ethereum', 'ethereum.jpg', 'auto', 'ETH', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(5, 'LiteCoin', 'litecoin.png', 'auto', 'LTC', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(7, 'Dash', 'dash.png', 'auto', 'DASH', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(8, 'Ripple', 'ripple.png', 'auto', 'XRP', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(10, 'Bitcoin Cash', 'bitcoincash.png', 'auto', 'BCH', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(11, 'Bank Transfer', 'bank-transfer.png', 'bank', 'BT', 0, NULL, NULL, NULL, NULL, '0.00', '0.00', '0.00', 0, '', 0),
-(12, 'Paypal', 'paypal.png', 'auto', 'PP', 2, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(13, 'Litecoin Testnet', 'ltct.png', 'auto', 'LTCT', 4, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(14, 'Payeer', 'payeer.png', 'auto', 'PY', 9, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
-(15, 'Paystack', 'paystack.png', 'auto', 'PSK', 10, '', '', '', '', '0.00', '0.00', '0.00', 0, '', 0),
+(2, 'Stripe', 'stripe.jpg', 'auto', 'ST', 1, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(3, 'Bitcoin', 'bitcoin.png', 'auto', 'BTC', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(4, 'Ethereum', 'ethereum.jpg', 'auto', 'ETH', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(5, 'LiteCoin', 'litecoin.png', 'auto', 'LTC', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(7, 'Dash', 'dash.png', 'auto', 'DASH', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(8, 'Ripple', 'ripple.png', 'auto', 'XRP', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(10, 'Bitcoin Cash', 'bitcoincash.png', 'auto', 'BCH', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(11, 'Bank Transfer', 'bank-transfer.png', 'bank', 'BT', 0, NULL, NULL, NULL, NULL, 0.00, 0.00, 0.00, 0, '', 0),
+(12, 'Paypal', 'paypal.png', 'auto', 'PP', 2, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(13, 'Litecoin Testnet', 'ltct.png', 'auto', 'LTCT', 4, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(14, 'Payeer', 'payeer.png', 'auto', 'PY', 9, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
+(15, 'Paystack', 'paystack.png', 'auto', 'PSK', 10, '', '', '', '', 0.00, 0.00, 0.00, 0, '', 0),
 (35, 'USDT', 'USDT.png', 'auto', 'USDT', 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0),
 (36, 'User Wallet', 'wallet.png', 'wallet', 'WLT', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0);
 
@@ -388,18 +565,18 @@ INSERT INTO `tbl_payment_methods` (`id`, `name`, `logo`, `type`, `ref`, `API`, `
 --
 
 CREATE TABLE `tbl_paypal` (
-  `id` int NOT NULL,
-  `userid` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
   `invoice` varchar(255) NOT NULL,
-  `plan` int NOT NULL,
+  `plan` int(11) NOT NULL,
   `txn_id` varchar(255) NOT NULL,
   `local_currency` float(10,2) NOT NULL,
   `payment_gross` float(10,2) NOT NULL,
   `currency_code` varchar(5) NOT NULL,
   `payer_email` varchar(255) NOT NULL,
   `payment_status` varchar(255) NOT NULL,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -408,14 +585,14 @@ CREATE TABLE `tbl_paypal` (
 --
 
 CREATE TABLE `tbl_paystack` (
-  `id` int NOT NULL,
-  `userId` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
   `ref` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `amount` decimal(10,2) NOT NULL,
-  `plan` int DEFAULT NULL,
-  `status` int DEFAULT NULL,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `plan` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -424,9 +601,9 @@ CREATE TABLE `tbl_paystack` (
 --
 
 CREATE TABLE `tbl_perfect_money` (
-  `id` int NOT NULL,
-  `userId` int NOT NULL,
-  `planId` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `planId` int(11) NOT NULL,
   `payee_account` varchar(255) DEFAULT NULL,
   `payer_account` varchar(255) DEFAULT NULL,
   `payee_name` varchar(255) DEFAULT NULL,
@@ -434,10 +611,10 @@ CREATE TABLE `tbl_perfect_money` (
   `payment_batch_number` varchar(255) DEFAULT NULL,
   `amount` decimal(10,2) DEFAULT NULL,
   `currency` varchar(255) DEFAULT NULL,
-  `status` int DEFAULT '0',
-  `modifiedDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` int(11) DEFAULT 0,
+  `modifiedDtm` datetime NOT NULL DEFAULT current_timestamp(),
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -446,12 +623,12 @@ CREATE TABLE `tbl_perfect_money` (
 --
 
 CREATE TABLE `tbl_periods` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `periodName` varchar(128) NOT NULL,
   `maturity_desc` varchar(128) NOT NULL,
-  `period_hrs` int NOT NULL,
+  `period_hrs` int(11) NOT NULL,
   `createdDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_periods`
@@ -475,9 +652,9 @@ INSERT INTO `tbl_periods` (`id`, `periodName`, `maturity_desc`, `period_hrs`, `c
 
 CREATE TABLE `tbl_permissions` (
   `module_id` varchar(128) NOT NULL,
-  `person_id` int NOT NULL,
+  `person_id` int(11) NOT NULL,
   `action_id` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -486,20 +663,20 @@ CREATE TABLE `tbl_permissions` (
 --
 
 CREATE TABLE `tbl_plans` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `minInvestment` decimal(13,2) NOT NULL,
   `maxInvestment` decimal(13,2) NOT NULL,
-  `intAfterMaturity` tinyint(1) DEFAULT '0',
-  `principalReturn` tinyint(1) NOT NULL DEFAULT '0',
-  `clientDisplay` int NOT NULL,
+  `intAfterMaturity` tinyint(1) DEFAULT 0,
+  `principalReturn` tinyint(1) NOT NULL DEFAULT 0,
+  `clientDisplay` int(11) NOT NULL,
   `profit` decimal(13,2) NOT NULL,
   `period` varchar(128) NOT NULL,
-  `maturity` int NOT NULL,
-  `businessDays` int NOT NULL DEFAULT '0',
-  `createdBy` int NOT NULL,
+  `maturity` int(11) NOT NULL,
+  `businessDays` int(11) NOT NULL DEFAULT 0,
+  `createdBy` int(11) NOT NULL,
   `createdDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -508,11 +685,11 @@ CREATE TABLE `tbl_plans` (
 --
 
 CREATE TABLE `tbl_referrals` (
-  `id` int NOT NULL,
-  `referrerId` int NOT NULL,
-  `referredId` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `referrerId` int(11) NOT NULL,
+  `referredId` int(11) NOT NULL,
   `createdDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -521,17 +698,17 @@ CREATE TABLE `tbl_referrals` (
 --
 
 CREATE TABLE `tbl_reset_password` (
-  `id` bigint NOT NULL,
-  `email` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `activation_id` varchar(32) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `agent` varchar(512) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `client_ip` varchar(32) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `isDeleted` tinyint NOT NULL DEFAULT '0',
-  `createdBy` bigint NOT NULL DEFAULT '1',
+  `id` bigint(20) NOT NULL,
+  `email` varchar(128) DEFAULT NULL,
+  `activation_id` varchar(32) DEFAULT NULL,
+  `agent` varchar(512) DEFAULT NULL,
+  `client_ip` varchar(32) DEFAULT NULL,
+  `isDeleted` tinyint(4) NOT NULL DEFAULT 0,
+  `createdBy` bigint(20) NOT NULL DEFAULT 1,
   `createdDtm` datetime DEFAULT NULL,
-  `updatedBy` bigint DEFAULT NULL,
+  `updatedBy` bigint(20) DEFAULT NULL,
   `updatedDtm` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -540,9 +717,9 @@ CREATE TABLE `tbl_reset_password` (
 --
 
 CREATE TABLE `tbl_roles` (
-  `roleId` tinyint NOT NULL COMMENT 'role id',
+  `roleId` tinyint(4) NOT NULL COMMENT 'role id',
   `role` varchar(50) NOT NULL COMMENT 'role text'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_roles`
@@ -563,7 +740,7 @@ CREATE TABLE `tbl_settings` (
   `type` varchar(128) NOT NULL,
   `value` varchar(500) NOT NULL,
   `updatedDtm` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_settings`
@@ -578,16 +755,16 @@ INSERT INTO `tbl_settings` (`type`, `value`, `updatedDtm`) VALUES
 ('currency', 'USD', '0000-00-00 00:00:00'),
 ('currency_exchange_rate', '100', '0000-00-00 00:00:00'),
 ('currency_position', 'before', '0000-00-00 00:00:00'),
-('darkLogo', 'logo.png', '0000-00-00 00:00:00'),
+('darkLogo', 'logo1.png', '0000-00-00 00:00:00'),
 ('description', 'Proinvest is an investment company that aggregates funds for investment in bitcoin and forex trading.                                                                                                                                                                                                                                                                                                                                                                                                               ', '0000-00-00 00:00:00'),
 ('disableRefPayouts', '0', '0000-00-00 00:00:00'),
 ('email', 'info@proinvest.co', '0000-00-00 00:00:00'),
 ('email_active', '0', '0000-00-00 00:00:00'),
-('favicon', 'favicon1.png', '0000-00-00 00:00:00'),
+('favicon', 'esy.jpg', '0000-00-00 00:00:00'),
 ('google_recaptcha', '0', '2020-04-01 13:11:47'),
 ('keywords', 'proinvest, bitcoin trading, forex, investment, trading                                                                                                                                                                                                                                                                                                                                                                                                                                                              ', '0000-00-00 00:00:00'),
 ('min_withdrawal', '10', '2020-04-01 13:10:00'),
-('name', 'ProInvest Fund', '0000-00-00 00:00:00'),
+('name', 'The web funds', '0000-00-00 00:00:00'),
 ('phone1', '315-369-597', '0000-00-00 00:00:00'),
 ('phone2', '315-369-597', '0000-00-00 00:00:00'),
 ('recaptcha_version', '', '2020-06-01 15:17:46'),
@@ -607,7 +784,7 @@ INSERT INTO `tbl_settings` (`type`, `value`, `updatedDtm`) VALUES
 ('two_factor_auth_active', '0', '2020-04-01 13:12:48'),
 ('url', '', '0000-00-00 00:00:00'),
 ('weekendPayouts', '', '0000-00-00 00:00:00'),
-('whiteLogo', 'logo-white.png', '0000-00-00 00:00:00');
+('whiteLogo', 'logo-white1.png', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -616,11 +793,11 @@ INSERT INTO `tbl_settings` (`type`, `value`, `updatedDtm`) VALUES
 --
 
 CREATE TABLE `tbl_templates` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `img` varchar(255) NOT NULL,
-  `isActive` int NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `isActive` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_templates`
@@ -636,18 +813,18 @@ INSERT INTO `tbl_templates` (`id`, `name`, `img`, `isActive`) VALUES
 --
 
 CREATE TABLE `tbl_tickets` (
-  `id` int NOT NULL,
-  `userId` int NOT NULL,
-  `subject` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `message` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `categoryId` int NOT NULL,
-  `priority` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `assignedTo` int NOT NULL,
-  `resolved` int NOT NULL DEFAULT '0',
-  `clientReply` int NOT NULL DEFAULT '0',
-  `supportReply` int NOT NULL DEFAULT '0',
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `subject` varchar(1024) NOT NULL,
+  `message` varchar(1024) NOT NULL,
+  `categoryId` int(11) NOT NULL,
+  `priority` varchar(255) DEFAULT NULL,
+  `assignedTo` int(11) NOT NULL,
+  `resolved` int(11) NOT NULL DEFAULT 0,
+  `clientReply` int(11) NOT NULL DEFAULT 0,
+  `supportReply` int(11) NOT NULL DEFAULT 0,
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -656,9 +833,9 @@ CREATE TABLE `tbl_tickets` (
 --
 
 CREATE TABLE `tbl_ticket_categories` (
-  `categoryId` int NOT NULL,
-  `categoryName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `categoryId` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_ticket_categories`
@@ -679,13 +856,13 @@ INSERT INTO `tbl_ticket_categories` (`categoryId`, `categoryName`) VALUES
 --
 
 CREATE TABLE `tbl_ticket_replies` (
-  `replyId` int NOT NULL,
-  `ticketId` int NOT NULL,
-  `message` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `repliedById` int NOT NULL,
-  `seen` int NOT NULL DEFAULT '0',
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `replyId` int(11) NOT NULL,
+  `ticketId` int(11) NOT NULL,
+  `message` varchar(1024) NOT NULL,
+  `repliedById` int(11) NOT NULL,
+  `seen` int(11) NOT NULL DEFAULT 0,
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -694,12 +871,12 @@ CREATE TABLE `tbl_ticket_replies` (
 --
 
 CREATE TABLE `tbl_translations` (
-  `id` int NOT NULL,
-  `lang_id` int NOT NULL,
+  `id` int(11) NOT NULL,
+  `lang_id` int(11) NOT NULL,
   `module` varchar(255) NOT NULL,
   `key` varchar(255) NOT NULL,
   `translation` varchar(1024) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_translations`
@@ -1541,34 +1718,42 @@ INSERT INTO `tbl_translations` (`id`, `lang_id`, `module`, `key`, `translation`)
 --
 
 CREATE TABLE `tbl_users` (
-  `userId` int NOT NULL,
-  `email` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `password` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `firstName` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `lastName` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `userId` int(11) NOT NULL,
+  `email` varchar(128) DEFAULT NULL,
+  `password` varchar(128) DEFAULT NULL,
+  `firstName` varchar(128) DEFAULT NULL,
+  `lastName` varchar(128) DEFAULT NULL,
+  `balance` int(11) NOT NULL,
   `mobile` varchar(20) DEFAULT NULL,
-  `two_factor_auth` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
-  `lang_id` int DEFAULT '1',
+  `two_factor_auth` varchar(255) DEFAULT '0',
+  `lang_id` int(11) DEFAULT 1,
   `ppic` varchar(128) DEFAULT NULL,
-  `roleId` tinyint DEFAULT NULL,
-  `isDeleted` tinyint DEFAULT '0',
-  `isActive` int DEFAULT '0',
+  `roleId` tinyint(4) DEFAULT NULL,
+  `isDeleted` tinyint(4) DEFAULT 0,
+  `isActive` int(11) DEFAULT 0,
   `activationUrl` varchar(1024) DEFAULT NULL,
   `refCode` varchar(1024) DEFAULT NULL,
   `pmtType` varchar(128) DEFAULT NULL,
   `pmtAccount` varchar(1024) DEFAULT NULL,
-  `createdBy` int DEFAULT '1',
+  `createdBy` int(11) DEFAULT 1,
   `createdDtm` datetime NOT NULL,
-  `updatedBy` int DEFAULT NULL,
+  `updatedBy` int(11) DEFAULT NULL,
   `updatedDtm` datetime DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_users`
 --
 
-INSERT INTO `tbl_users` (`userId`, `email`, `password`, `firstName`, `lastName`, `mobile`, `two_factor_auth`, `lang_id`, `ppic`, `roleId`, `isDeleted`, `isActive`, `activationUrl`, `refCode`, `pmtType`, `pmtAccount`, `createdBy`, `createdDtm`, `updatedBy`, `updatedDtm`) VALUES
-(1, 'admin@proinvest.com', '$2y$10$f7o5OMm6wYyHeMrDLRNs8exD8VHycl5nfNomVS3l36cqSuNqFY47W', 'Admin', 'Proinvest', '+12015550123', '0', 2, '', 1, 0, 0, '', '', '', '', 1, '2019-12-12 00:00:00', 1, '2020-08-08 09:19:51');
+INSERT INTO `tbl_users` (`userId`, `email`, `password`, `firstName`, `lastName`, `balance`, `mobile`, `two_factor_auth`, `lang_id`, `ppic`, `roleId`, `isDeleted`, `isActive`, `activationUrl`, `refCode`, `pmtType`, `pmtAccount`, `createdBy`, `createdDtm`, `updatedBy`, `updatedDtm`) VALUES
+(1, 'admin@proinvest.com', '$2y$10$f7o5OMm6wYyHeMrDLRNs8exD8VHycl5nfNomVS3l36cqSuNqFY47W', 'Admin', 'Proinvest', 0, '+12015550123', '0', 2, '', 1, 0, 0, '', '', '', '', 1, '2019-12-12 00:00:00', 1, '2020-08-08 09:19:51'),
+(57, 'greatkelvin21@gmail.com', '$2y$10$bpsn/C7xCr8jC1iho4I34eX3yx2Y1.1nR3OnAWVFwr6CMeKQVbPki', 'my', 'name', 0, NULL, '0', 1, NULL, 3, 1, 0, NULL, 'H7MqiSLR', NULL, NULL, 1, '2024-09-22 08:39:12', NULL, NULL),
+(58, 'smartkelvin775@gmail.com', '$2y$10$7ykMnzkTtjFT0vPFV8XVRegAL1XwUAMZUBMGBmEfDm51LS2UvIPqG', 'jos', 'hello', 0, NULL, '0', 1, NULL, 3, 1, 0, NULL, 'J3oF9gKZ', NULL, NULL, 1, '2024-09-22 09:11:13', NULL, NULL),
+(59, 'great@mail.com', '$2y$10$cTDFkX2pAUQMLA9f4SX3NeSiAdH3rgEeC2ZzPW8F0VrbR6IN3nng2', 'testing', 'site', 0, NULL, '0', 1, NULL, 3, 1, 0, NULL, 'pik9PzvI', NULL, NULL, 1, '2024-09-22 09:39:25', NULL, NULL),
+(60, 'smartkelvin775@gmail.com', '$2y$10$JaZbmswEqWW5dAp1RofbnO/6p./L06WIewcm7Z/pLEv1Oo44TrDOW', 'josiah', 'davis', 0, NULL, '0', 1, NULL, 3, 1, 0, NULL, 'irMAHDa9', NULL, NULL, 1, '2024-09-26 17:00:00', NULL, NULL),
+(61, 'user@mail.com', '$2y$10$vkiLzCdZLAiwrpgXazx15uS/JaAdPlzHD35FvhRjvGYMdWMK5RDu.', 'dmg', 'king', 0, NULL, '0', 1, NULL, 3, 1, 0, NULL, 'X4moGeIc', 'Payeer', 'user@mail.com', 1, '2024-09-28 20:36:57', 61, '2024-09-28 20:38:45'),
+(62, 'dave@mail.com', '$2y$10$XSE9aPeSJzsHF73EUP36K.hrBAq8JqK0DeQWkpu9d/1FasHV/tK.6', 'josiah', 'davis', 0, NULL, '0', 1, NULL, 3, 1, 0, NULL, '438R6Wro', NULL, NULL, 1, '2024-10-30 15:15:29', NULL, NULL),
+(63, 'meemail@mail.com', '$2y$10$vjtla0dYRt/FxyC7hOS0j.YtgY80QfYL3oBNYuUsQvSi2dtPaoMXm', 'Josahkeke', 'Kele', 0, NULL, '0', 1, NULL, 3, 0, 0, NULL, 'uaDHMob6', NULL, NULL, 1, '2024-11-12 05:28:54', 1, '2024-11-12 05:29:57');
 
 -- --------------------------------------------------------
 
@@ -1577,9 +1762,9 @@ INSERT INTO `tbl_users` (`userId`, `email`, `password`, `firstName`, `lastName`,
 --
 
 CREATE TABLE `tbl_withdrawals` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `txnCode` varchar(1024) NOT NULL,
-  `userId` int NOT NULL,
+  `userId` int(11) NOT NULL,
   `amount` decimal(13,2) NOT NULL,
   `withdrawal_method` varchar(255) DEFAULT NULL,
   `withdrawal_account` varchar(255) DEFAULT NULL,
@@ -1587,11 +1772,11 @@ CREATE TABLE `tbl_withdrawals` (
   `account_name` varchar(255) DEFAULT NULL,
   `account_number` varchar(255) DEFAULT NULL,
   `swift_code` varchar(255) DEFAULT NULL,
-  `status` int NOT NULL,
+  `status` int(11) NOT NULL,
   `reason` varchar(1024) DEFAULT NULL,
-  `createdBy` int NOT NULL,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `createdBy` int(11) NOT NULL,
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Indexes for dumped tables
@@ -1786,157 +1971,157 @@ ALTER TABLE `tbl_withdrawals`
 -- AUTO_INCREMENT for table `tbl_addons_api`
 --
 ALTER TABLE `tbl_addons_api`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `tbl_coinpayments`
 --
 ALTER TABLE `tbl_coinpayments`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_content`
 --
 ALTER TABLE `tbl_content`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tbl_deposits`
 --
 ALTER TABLE `tbl_deposits`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_earnings`
 --
 ALTER TABLE `tbl_earnings`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_email_templates`
 --
 ALTER TABLE `tbl_email_templates`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_faqs`
 --
 ALTER TABLE `tbl_faqs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_languages`
 --
 ALTER TABLE `tbl_languages`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_lang_modules`
 --
 ALTER TABLE `tbl_lang_modules`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tbl_last_login`
 --
 ALTER TABLE `tbl_last_login`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `tbl_payeer`
 --
 ALTER TABLE `tbl_payeer`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_payment_methods`
 --
 ALTER TABLE `tbl_payment_methods`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tbl_paypal`
 --
 ALTER TABLE `tbl_paypal`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_paystack`
 --
 ALTER TABLE `tbl_paystack`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_perfect_money`
 --
 ALTER TABLE `tbl_perfect_money`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_periods`
 --
 ALTER TABLE `tbl_periods`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_plans`
 --
 ALTER TABLE `tbl_plans`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_referrals`
 --
 ALTER TABLE `tbl_referrals`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_reset_password`
 --
 ALTER TABLE `tbl_reset_password`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_templates`
 --
 ALTER TABLE `tbl_templates`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_tickets`
 --
 ALTER TABLE `tbl_tickets`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_ticket_categories`
 --
 ALTER TABLE `tbl_ticket_categories`
-  MODIFY `categoryId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `categoryId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_ticket_replies`
 --
 ALTER TABLE `tbl_ticket_replies`
-  MODIFY `replyId` int NOT NULL AUTO_INCREMENT;
+  MODIFY `replyId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_translations`
 --
 ALTER TABLE `tbl_translations`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1190;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1190;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `userId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `tbl_withdrawals`
 --
 ALTER TABLE `tbl_withdrawals`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
