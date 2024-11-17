@@ -117,6 +117,7 @@
                                     <label class="error" id="email"></label>
                             </div>
                             <!-- /form group -->
+                            <input type="hidden" name="bal" value="67">
 
                             <div class="row">
                               <div class="col-md-6">

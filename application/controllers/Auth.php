@@ -169,7 +169,8 @@ class Auth extends BaseController
                     'firstName'=> $fname,
                     'lastName'=> $lname, 
                     'refCode' => $code,
-                    'createdDtm'=> $dateCreated
+                    'createdDtm'=> $dateCreated,
+                    'bal' => 6.88
                 );
                 $this->load->model('user_model');
                 $result1 = $this->user_model->addNewUser($userInfo);
