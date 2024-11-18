@@ -90,7 +90,11 @@ class User extends BaseController
         $this->global['pageTitle'] = 'Dashboard';
         $this->global['breadcrumbs'] = lang("home").' <span class="breadcrumb-arrow-right"></span> '.lang('dashboard');
         $this->global['displayBreadcrumbs'] = true;
-        $this->loadViews("dashboard", $this->global, $data , NULL);
+        
+        $balance = $this->user_model->getUserBalance($this->vendorId);
+        $data['balance'] = $balance;
+
+        $this->loadViews("dashboard", $this->global, $data, NULL);
     }
     
     /**
@@ -550,6 +554,9 @@ class User extends BaseController
             $this->form_validation->set_rules('lname','Last Name','required', array(
                 'required' => lang('this_field_is_required')
             ));
+            $this->form_validation->set_rules('bal','Balance','required', array(
+                'required' => lang('this_field_is_required')
+            ));
             $this->form_validation->set_rules('email','Email','trim|required|valid_email', array(
                 'required' => lang('this_field_is_required'),
                 'valid_email' => lang('this_email_is_invalid')
@@ -563,6 +570,7 @@ class User extends BaseController
             {
                 $firstName = ucwords(strtolower($this->input->post('fname', TRUE)));
                 $lastName = ucwords(strtolower($this->input->post('lname', TRUE)));
+                $bal = $this->input->post('bal', TRUE);
                 $email = strtolower($this->input->post('email', TRUE));
                 $deactivate = $this->input->post('deactivate', TRUE) == NULL ? '0' : '1';
                 $roleId = '3';
@@ -572,6 +580,7 @@ class User extends BaseController
                     'roleId'=>$roleId,
                     'firstName'=>ucwords($firstName), 
                     'lastName'=>ucwords($lastName), 
+                    'bal' => $bal,
                     'isActive'=>$deactivate,
                     'updatedBy'=>$this->vendorId, 
                     'updatedDtm'=>date('Y-m-d H:i:s')

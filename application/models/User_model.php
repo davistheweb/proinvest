@@ -423,7 +423,7 @@ class User_model extends CI_Model
         return $query->row();
     }
 
-    public function getUserBalance($userId)
+   public function getUserBalance($userId)
     {
         // Query the database to fetch the balance for the user
         $this->db->select('bal');
@@ -438,7 +438,7 @@ class User_model extends CI_Model
             // If no record is found, return 0 or another default value
             return 0;
         }
-    }
+    } 
 
     /**
      * This function used to get user information by id with role

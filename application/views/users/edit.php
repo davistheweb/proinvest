@@ -3,6 +3,7 @@ $ppic = $userInfo->ppic == '' ? base_url('assets/dist/img/avatar.png') : $ppic;
 $userId = $this->security->xss_clean($userInfo->userId);
 $fname = set_value('fname') == false ? $this->security->xss_clean($userInfo->firstName) : set_value('fname');
 $lname = set_value('lname') == false ? $this->security->xss_clean($userInfo->lastName) : set_value('lname');
+$bal = set_value('bal') == false ? $this->security->xss_clean($userInfo->bal) : set_value('bal');
 $email = set_value('email') == false ? $this->security->xss_clean($userInfo->email) : set_value('email');
 $mobile = set_value('mobile') == false ? $this->security->xss_clean($userInfo->mobile) : set_value('mobile');
 $deactivate = set_value('deactivate') == false ? $this->security->xss_clean($userInfo->isActive) : set_value('deactivate');
@@ -114,6 +115,18 @@ $roleId = $this->security->xss_clean($userInfo->roleId);
                                                             placeholder="<?php echo lang('last_name') ?>" value="<?php echo $lname ?>">
                                                         <label class="error"
                                                             for="fname"><?php echo form_error('lname'); ?></label>
+                                                    </div>
+                                                    <!-- /form group -->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- Form balance -->
+                                                    <div class="form-group">
+                                                        <label for="bal">Balance</label>
+                                                        <input type="text" name="bal"
+                                                            class="form-control"
+                                                            id="bal" aria-describedby="bal"
+                                                            placeholder="Balance" value="<?php echo $bal ?>">
+                                                        
                                                     </div>
                                                     <!-- /form group -->
                                                 </div>
