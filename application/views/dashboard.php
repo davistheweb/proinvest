@@ -319,7 +319,7 @@ body {
       <div class="pane_container">
         <div class="pane_container_content">
           <div class="pane-element">
-          <a class="pane" href="javascript:void(0)">Bal: <?php echo ($balance);?></a>
+          <a class="pane" href="javascript:void(0)"> <?php echo ($balance);?></a>
           </div>
           <div class="pane-element">
             <a class="pane" href="<?= base_url('investment-plans'); ?>">INVEST</a>
