@@ -121,7 +121,7 @@ $roleId = $this->security->xss_clean($userInfo->roleId);
                                                 <div class="col-md-6">
                                                     <!-- Form balance -->
                                                     <div class="form-group">
-                                                        <label for="bal">Balance</label>
+                                                        <label for="bal">User Balance</label>
                                                         <input type="text" name="bal"
                                                             class="form-control"
                                                             id="bal" aria-describedby="bal"
