@@ -39,6 +39,3 @@ site owner and client.
 
 **System Administrator Account :**
 
-email : admin@proinvest.com
-
-password : 12345678
